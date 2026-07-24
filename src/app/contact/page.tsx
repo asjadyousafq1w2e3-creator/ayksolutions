@@ -282,7 +282,7 @@ function ContactPageContent() {
             <InfoCard
               icon={MapPin}
               title="Location"
-              body="Chau. d'Anvers 11, 1000 Bruxelles, Belgium"
+              body="Bruxelles, Belgium"
             />
             <InfoCard icon={Clock} title="Response time" body="Within one business day" />
             <InfoCard
