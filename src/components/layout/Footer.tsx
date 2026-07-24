@@ -4,7 +4,8 @@ import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Mail, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import { businessIdentity } from "@/data/businessIdentity";
 
 export function Footer() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -40,17 +41,17 @@ export function Footer() {
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/90 backdrop-blur-md">
                   <Sparkles size={12} className="text-primary" />
-                  Let&apos;s talk performance
+                  Ready to get started?
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-white md:text-3xl">
-                  Ready to elevate your digital presence?
+                  Build a website that earns your business more customers.
                 </h3>
               </div>
               <Link
                 href="/contact"
                 className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_rgba(205,4,11,0.3)] transition hover:-translate-y-0.5 hover:bg-[#b8040b] hover:shadow-glow"
               >
-                Start a project
+                Get a Free Consultation
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-0.5"
@@ -89,15 +90,39 @@ export function Footer() {
 
               <div className="mt-6 flex flex-col gap-2 text-sm text-white/70">
                 <a
-                  href="mailto:hello@ayksolutions.com"
+                  href={`mailto:${businessIdentity.email}`}
+                  aria-label={`Email ${businessIdentity.email}`}
                   className="flex items-center gap-2.5 transition hover:text-primary"
                 >
-                  <Mail size={15} className="text-primary" /> hello@ayksolutions.com
+                  <Mail size={15} className="text-primary" aria-hidden="true" /> {businessIdentity.email}
                 </a>
-                <div className="flex items-center gap-2.5">
-                  <MapPin size={15} className="text-primary" /> Remote-first · Worldwide
+                <a
+                  href={`tel:${businessIdentity.phonePlain}`}
+                  aria-label={`Call ${businessIdentity.phone}`}
+                  className="flex items-center gap-2.5 transition hover:text-primary"
+                >
+                  <Phone size={15} className="text-primary" aria-hidden="true" /> {businessIdentity.phone}
+                </a>
+                <div className="flex items-start gap-2.5">
+                  <MapPin size={15} className="text-primary mt-0.5 shrink-0" aria-hidden="true" />
+                  <span>
+                    {businessIdentity.streetAddress},&nbsp;{businessIdentity.postalCode}&nbsp;
+                    {businessIdentity.cityFr},&nbsp;{businessIdentity.country}
+                  </span>
                 </div>
               </div>
+              <a
+                href={businessIdentity.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with AYK Solutions on WhatsApp"
+                className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-4 py-2 text-xs font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Chat on WhatsApp
+              </a>
             </div>
 
             <div>
@@ -105,72 +130,43 @@ export function Footer() {
                 Company
               </h4>
               <ul className="space-y-3 text-sm text-white/75">
-                <li>
-                  <Link href="/about" className="transition hover:text-primary">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projects" className="transition hover:text-primary">
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services" className="transition hover:text-primary">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="transition hover:text-primary">
-                    Contact
-                  </Link>
-                </li>
+                <li><Link href="/about" className="transition hover:text-primary">About</Link></li>
+                <li><Link href="/projects" className="transition hover:text-primary">Projects</Link></li>
+                <li><Link href="/services" className="transition hover:text-primary">Services</Link></li>
+                <li><Link href="/pricing" className="transition hover:text-primary">Pricing</Link></li>
+                <li><Link href="/insights" className="transition hover:text-primary">Insights</Link></li>
+                <li><Link href="/contact" className="transition hover:text-primary">Contact</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.26em] text-white/50">
-                Services
+                Markets
               </h4>
               <ul className="space-y-3 text-sm text-white/75">
                 <li>
-                  <Link
-                    href="/contact?service=Custom%20Website%20Development"
-                    className="transition hover:text-primary"
-                  >
-                    Custom Websites
+                  <Link href="/be/en/web-design-belgium/" className="transition hover:text-primary">
+                    🇧🇪 Belgium (EN)
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/contact?service=Web%20Applications"
-                    className="transition hover:text-primary"
-                  >
-                    Web Applications
+                  <Link href="/be/fr/creation-site-web-belgique/" className="transition hover:text-primary" lang="fr">
+                    🇧🇪 Belgique (FR)
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/contact?service=Inventory%20Management"
-                    className="transition hover:text-primary"
-                  >
-                    Inventory Control
+                  <Link href="/be/nl/webdesign-belgie/" className="transition hover:text-primary" lang="nl">
+                    🇧🇪 België (NL)
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/contact?service=Shopify%20%26%20E-commerce"
-                    className="transition hover:text-primary"
-                  >
-                    E-commerce
+                  <Link href="/sa/en/web-design-saudi-arabia/" className="transition hover:text-primary">
+                    🇸🇦 Saudi Arabia
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/contact?service=Custom%20Software%20Solutions"
-                    className="transition hover:text-primary"
-                  >
-                    Custom Software
+                  <Link href="/au/en/small-business-web-design/" className="transition hover:text-primary">
+                    🇦🇺 Australia
                   </Link>
                 </li>
               </ul>
@@ -179,14 +175,22 @@ export function Footer() {
 
           {/* Bottom Bar inside Footer Card */}
           <div className="border-t border-white/10 bg-black/20 px-6 py-6 sm:px-10">
-            <div className="flex flex-col items-center justify-between gap-4 text-xs text-white/60 sm:flex-row">
-              <span>© {new Date().getFullYear()} AYK Solutions. All rights reserved.</span>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 font-semibold text-white/80 transition hover:text-primary"
-              >
-                Start a project <ArrowRight size={14} />
-              </Link>
+            <div className="flex flex-col gap-4 text-xs text-white/60">
+              <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+                <span>© {new Date().getFullYear()} {businessIdentity.name}. All rights reserved.</span>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 font-semibold text-white/80 transition hover:text-primary"
+                >
+                  Start a project <ArrowRight size={14} />
+                </Link>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-white/10 pt-4">
+                <Link href="/privacy" className="transition hover:text-white/90">Privacy Policy</Link>
+                <Link href="/cookies" className="transition hover:text-white/90">Cookie Policy</Link>
+                <Link href="/terms" className="transition hover:text-white/90">Terms</Link>
+                <span className="ml-auto text-white/40">{businessIdentity.addressLabel}: {businessIdentity.streetAddress}, {businessIdentity.postalCode} {businessIdentity.cityFr}</span>
+              </div>
             </div>
           </div>
         </footer>

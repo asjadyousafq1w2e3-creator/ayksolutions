@@ -9,8 +9,9 @@ import { ArrowRight, Menu, X } from "lucide-react";
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/projects", label: "Projects" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/insights", label: "Insights" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -90,7 +91,7 @@ export function Header() {
             href="/contact"
             className="group flex h-10 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground shadow-[0_8px_24px_rgb(214_9_18/0.22)] transition hover:-translate-y-0.5 hover:bg-[#b8040b] hover:shadow-glow"
           >
-            <span>Let&apos;s build</span>
+            <span>Free Consultation</span>
             <ArrowRight
               size={15}
               aria-hidden="true"

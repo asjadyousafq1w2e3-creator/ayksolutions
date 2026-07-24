@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Archivo, Manrope } from "next/font/google";
 import RootLayoutClient from "./layout.client";
+import { businessIdentity } from "@/data/businessIdentity";
 import "../styles.css";
 
 const archivo = Archivo({
@@ -18,20 +19,73 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const domain = "https://ayksolutions.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ayksolutions.com"),
-  title: "AYK Solutions — Premium Software Development",
+  metadataBase: new URL(domain),
+  title: {
+    default: "Professional Website Design for Small Businesses | AYK Solutions",
+    template: "%s | AYK Solutions",
+  },
   description:
-    "We build websites, web apps, automations and custom software that help businesses grow faster.",
+    "AYK Solutions designs fast, mobile-first and conversion-focused websites for small businesses in Belgium, Saudi Arabia, Europe and Australia. Launch your professional website in as little as seven days.",
+  keywords: [
+    "web design Belgium",
+    "website development Belgium",
+    "small business website Belgium",
+    "web design Brussels",
+    "professional website Belgium",
+    "web design Saudi Arabia",
+    "website development Saudi Arabia",
+    "small business web design Australia",
+    "ecommerce development Belgium",
+    "Shopify developer Belgium",
+    "WordPress website Belgium",
+    "website redesign",
+    "conversion-focused website",
+    "mobile-first web design",
+  ],
+  authors: [{ name: "AYK Solutions", url: domain }],
+  creator: "AYK Solutions",
+  publisher: "AYK Solutions",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: domain,
+    languages: {
+      en: `${domain}/`,
+      "en-BE": `${domain}/be/en/web-design-belgium/`,
+      "fr-BE": `${domain}/be/fr/creation-site-web-belgique/`,
+      "nl-BE": `${domain}/be/nl/webdesign-belgie/`,
+      "en-SA": `${domain}/sa/en/web-design-saudi-arabia/`,
+      "ar-SA": `${domain}/sa/ar/`,
+      "en-AU": `${domain}/au/en/small-business-web-design/`,
+      "x-default": `${domain}/`,
+    },
+  },
   openGraph: {
-    title: "AYK Solutions — Premium Software Development",
+    title: "Professional Website Design for Small Businesses | AYK Solutions",
     description:
-      "Custom websites, web apps, automations and software that move your business forward.",
+      "Fast, mobile-first and conversion-focused websites for businesses in Belgium, Saudi Arabia, Europe and Australia. Launch in as little as seven days.",
     type: "website",
-    url: "https://ayksolutions.com",
+    url: domain,
+    siteName: "AYK Solutions",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Professional Website Design for Small Businesses | AYK Solutions",
+    description:
+      "Fast, mobile-first websites for small businesses in Belgium, Saudi Arabia, Europe and Australia.",
   },
   icons: {
     icon: [
@@ -42,15 +96,89 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/site.webmanifest",
-  keywords: [
-    "custom software development",
-    "web applications",
-    "website design",
-    "e-commerce",
-    "SaaS development",
-  ],
-  authors: [{ name: "AYK Solutions" }],
+  verification: {
+    // google: "YOUR_GSC_VERIFICATION_CODE",  // Add when GSC is configured
+    // other: { "msvalidate.01": "YOUR_BING_CODE" },
+  },
 };
+
+/** JSON-LD structured data — Organization + WebSite */
+function StructuredData() {
+  const organization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${domain}/#organization`,
+    name: businessIdentity.name,
+    legalName: businessIdentity.legalName,
+    url: domain,
+    logo: {
+      "@type": "ImageObject",
+      url: `${domain}/ayk/logo.png`,
+      width: 200,
+      height: 200,
+    },
+    description:
+      "AYK Solutions builds professional websites, ecommerce stores, web applications and digital business systems for small and growing businesses internationally.",
+    email: businessIdentity.email,
+    telephone: businessIdentity.phone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: businessIdentity.streetAddress,
+      addressLocality: businessIdentity.city,
+      postalCode: businessIdentity.postalCode,
+      addressCountry: businessIdentity.countryCode,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: businessIdentity.phone,
+      contactType: "customer service",
+      email: businessIdentity.email,
+      availableLanguage: ["English", "French", "Dutch", "Arabic"],
+    },
+    areaServed: [
+      { "@type": "Country", name: "Belgium" },
+      { "@type": "Country", name: "Saudi Arabia" },
+      { "@type": "Country", name: "Australia" },
+      { "@type": "Country", name: "Netherlands" },
+      { "@type": "Country", name: "France" },
+    ],
+    sameAs: [
+      // Add confirmed social profile URLs here when available
+    ],
+  };
+
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${domain}/#website`,
+    url: domain,
+    name: "AYK Solutions",
+    description:
+      "Professional website design and web development for small businesses in Belgium, Saudi Arabia, Europe and Australia.",
+    publisher: { "@id": `${domain}/#organization` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${domain}/?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
+      />
+    </>
+  );
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -58,6 +186,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <StructuredData />
       </head>
       <body>
         <RootLayoutClient>{children}</RootLayoutClient>

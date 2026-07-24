@@ -1,16 +1,30 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
+  Globe,
   HeartHandshake,
   ShieldCheck,
   Sparkles,
   Target,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+
+export const metadata: Metadata = {
+  title: "About AYK Solutions — International Web Design Partner",
+  description:
+    "AYK Solutions is a web design and development partner helping small businesses in Belgium, Saudi Arabia, Europe and Australia build a professional online presence.",
+  alternates: {
+    canonical: "https://ayksolutions.com/about/",
+  },
+  openGraph: {
+    title: "About AYK Solutions — International Web Design Partner",
+    description:
+      "Helping small businesses in Belgium, Saudi Arabia, Europe and Australia build a professional online presence.",
+  },
+};
 
 const values = [
   {
@@ -51,13 +65,18 @@ export default function AboutPage() {
           <Reveal>
             <p className="section-kicker">About AYK Solutions</p>
             <h1 className="mt-4 max-w-4xl text-3xl font-display font-semibold leading-tight md:text-5xl">
-              A focused software studio for teams that care about quality.
+              Your International Web Design Partner for Small Business Growth
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
-              We design and build websites, web applications, automations, and custom software for
-              businesses that need reliable systems, clear communication, and launch-ready
-              execution.
+              AYK Solutions helps small businesses in Belgium, Saudi Arabia, Europe and Australia
+              build professional websites and digital systems that earn customer trust, explain
+              services clearly and generate more enquiries. We focus on clear communication,
+              honest scope and reliable delivery.
             </p>
+            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-medium text-muted-foreground shadow-soft">
+              <Globe size={12} className="text-primary" aria-hidden="true" />
+              Serving small businesses in Belgium, Saudi Arabia, Europe &amp; Australia remotely
+            </div>
           </Reveal>
 
           <Reveal delay={0.12}>
@@ -80,14 +99,15 @@ export default function AboutPage() {
                   <h2 className="mt-1 text-xl font-display font-semibold">AYK Solutions</h2>
                 </div>
               </div>
-              <div className="mt-6 grid grid-cols-3 gap-3">
+              <div className="mt-6 grid grid-cols-2 gap-3">
                 {[
-                  ["120+", "projects"],
-                  ["8 yrs", "experience"],
-                  ["99.98%", "uptime"],
+                  ["BE 🇧🇪", "Belgium"],
+                  ["SA 🇸🇦", "Saudi Arabia"],
+                  ["AU 🇦🇺", "Australia"],
+                  ["EU 🇪🇺", "Europe"],
                 ].map(([value, label]) => (
                   <div key={label} className="rounded-2xl bg-secondary/70 p-3">
-                    <div className="text-xl font-display font-semibold text-primary">{value}</div>
+                    <div className="text-base font-display font-semibold text-primary">{value}</div>
                     <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                       {label}
                     </div>
@@ -174,17 +194,21 @@ export default function AboutPage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-background/78">
-                  Work with AYK
+                  Work with AYK Solutions
                 </p>
                 <h2 className="mt-3 max-w-2xl text-2xl font-display font-semibold md:text-4xl">
-                  Let us turn your idea, workflow, or outdated system into polished software.
+                  Build a website that helps your business look professional and win more customers.
                 </h2>
+                <p className="mt-3 text-sm text-background/70 max-w-xl">
+                  We serve small businesses in Belgium, Saudi Arabia, Europe and Australia. All
+                  collaboration happens remotely — clear, fast and focused on your goals.
+                </p>
               </div>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-[#b8040b]"
               >
-                Start a conversation <ArrowRight size={16} />
+                Get a Free Consultation <ArrowRight size={16} />
               </Link>
             </div>
           </div>

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow dev/internal paths
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap
+Sitemap: https://ayksolutions.com/sitemap.xml
