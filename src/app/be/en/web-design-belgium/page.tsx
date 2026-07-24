@@ -137,9 +137,15 @@ export default function WebDesignBelgiumPage() {
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-xs text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary transition">Home</Link></li>
+              <li>
+                <Link href="/" className="hover:text-primary transition">
+                  Home
+                </Link>
+              </li>
               <li aria-hidden="true">/</li>
-              <li><span>Belgium</span></li>
+              <li>
+                <span>Belgium</span>
+              </li>
               <li aria-hidden="true">/</li>
               <li className="text-foreground font-medium">Web Design</li>
             </ol>
@@ -147,9 +153,21 @@ export default function WebDesignBelgiumPage() {
 
           {/* Language switcher */}
           <div className="mb-8 flex flex-wrap gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-semibold text-primary">🇧🇪 English</span>
-            <Link href="/be/fr/creation-site-web-belgique/" className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[11px] font-semibold text-muted-foreground hover:border-primary/40 hover:text-primary transition">🇧🇪 Français</Link>
-            <Link href="/be/nl/webdesign-belgie/" className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[11px] font-semibold text-muted-foreground hover:border-primary/40 hover:text-primary transition">🇧🇪 Nederlands</Link>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-semibold text-primary">
+              🇧🇪 English
+            </span>
+            <Link
+              href="/be/fr/creation-site-web-belgique/"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[11px] font-semibold text-muted-foreground hover:border-primary/40 hover:text-primary transition"
+            >
+              🇧🇪 Français
+            </Link>
+            <Link
+              href="/be/nl/webdesign-belgie/"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[11px] font-semibold text-muted-foreground hover:border-primary/40 hover:text-primary transition"
+            >
+              🇧🇪 Nederlands
+            </Link>
           </div>
 
           <Reveal>
@@ -198,21 +216,32 @@ export default function WebDesignBelgiumPage() {
       </section>
 
       {/* ── WHAT'S INCLUDED ────────────────────────────────────────────────── */}
-      <section aria-labelledby="included-heading" className="border-t border-border/60 bg-background py-20">
+      <section
+        aria-labelledby="included-heading"
+        className="border-t border-border/60 bg-background py-20"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <h2 id="included-heading" className="font-display text-2xl font-semibold text-foreground md:text-3xl">
+            <h2
+              id="included-heading"
+              className="font-display text-2xl font-semibold text-foreground md:text-3xl"
+            >
               What Is Included in Our Belgium Website Service
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">
-              Every website we deliver is designed around your business goals — not a generic template.
+              Every website we deliver is designed around your business goals — not a generic
+              template.
             </p>
           </Reveal>
           <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {included.map((item) => (
               <Reveal key={item}>
                 <div className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4 shadow-soft">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+                  <CheckCircle2
+                    size={16}
+                    className="mt-0.5 shrink-0 text-primary"
+                    aria-hidden="true"
+                  />
                   <span className="text-xs font-medium leading-5 text-foreground/90">{item}</span>
                 </div>
               </Reveal>
@@ -222,10 +251,16 @@ export default function WebDesignBelgiumPage() {
       </section>
 
       {/* ── IS YOUR WEBSITE WORKING? ───────────────────────────────────────── */}
-      <section aria-labelledby="problem-be-heading" className="border-t border-border/60 bg-secondary/30 py-20">
+      <section
+        aria-labelledby="problem-be-heading"
+        className="border-t border-border/60 bg-secondary/30 py-20"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <h2 id="problem-be-heading" className="font-display text-2xl font-semibold text-foreground md:text-3xl max-w-3xl">
+            <h2
+              id="problem-be-heading"
+              className="font-display text-2xl font-semibold text-foreground md:text-3xl max-w-3xl"
+            >
               Is Your Current Website Losing Potential Customers?
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
@@ -254,10 +289,16 @@ export default function WebDesignBelgiumPage() {
       </section>
 
       {/* ── CITY COVERAGE ──────────────────────────────────────────────────── */}
-      <section aria-labelledby="cities-heading" className="border-t border-border/60 bg-background py-20">
+      <section
+        aria-labelledby="cities-heading"
+        className="border-t border-border/60 bg-background py-20"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <h2 id="cities-heading" className="font-display text-2xl font-semibold text-foreground md:text-3xl">
+            <h2
+              id="cities-heading"
+              className="font-display text-2xl font-semibold text-foreground md:text-3xl"
+            >
               Serving Small Businesses Across Belgium
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">
@@ -273,7 +314,9 @@ export default function WebDesignBelgiumPage() {
               >
                 <MapPin size={13} className="text-primary" aria-hidden="true" />
                 {city}
-                <span className="text-muted-foreground text-xs">/ {fr} / {nl}</span>
+                <span className="text-muted-foreground text-xs">
+                  / {fr} / {nl}
+                </span>
               </div>
             ))}
           </div>
@@ -281,10 +324,16 @@ export default function WebDesignBelgiumPage() {
       </section>
 
       {/* ── RELATED SERVICES ───────────────────────────────────────────────── */}
-      <section aria-labelledby="related-services-heading" className="border-t border-border/60 bg-secondary/30 py-16">
+      <section
+        aria-labelledby="related-services-heading"
+        className="border-t border-border/60 bg-secondary/30 py-16"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <h2 id="related-services-heading" className="font-display text-xl font-semibold text-foreground mb-6">
+            <h2
+              id="related-services-heading"
+              className="font-display text-xl font-semibold text-foreground mb-6"
+            >
               Website Services for Belgian Businesses
             </h2>
             <div className="flex flex-wrap gap-3">
@@ -309,19 +358,30 @@ export default function WebDesignBelgiumPage() {
       </section>
 
       {/* ── FAQ ────────────────────────────────────────────────────────────── */}
-      <section aria-labelledby="faq-be-heading" className="border-t border-border/60 bg-background py-20">
+      <section
+        aria-labelledby="faq-be-heading"
+        className="border-t border-border/60 bg-background py-20"
+      >
         <div className="mx-auto max-w-4xl px-6">
           <Reveal>
-            <h2 id="faq-be-heading" className="font-display text-2xl font-semibold text-foreground md:text-3xl">
+            <h2
+              id="faq-be-heading"
+              className="font-display text-2xl font-semibold text-foreground md:text-3xl"
+            >
               Frequently Asked Questions — Web Design Belgium
             </h2>
           </Reveal>
           <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-border bg-card shadow-card">
             {faqs.map((f) => (
-              <details key={f.q} className="group border-b border-border p-6 last:border-b-0 open:bg-secondary/35">
+              <details
+                key={f.q}
+                className="group border-b border-border p-6 last:border-b-0 open:bg-secondary/35"
+              >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
                   <span className="font-display font-semibold text-sm">{f.q}</span>
-                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-secondary text-primary transition-transform group-open:rotate-45">+</span>
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-secondary text-primary transition-transform group-open:rotate-45">
+                    +
+                  </span>
                 </summary>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{f.a}</p>
               </details>
@@ -331,24 +391,42 @@ export default function WebDesignBelgiumPage() {
       </section>
 
       {/* ── CONTACT STRIP ──────────────────────────────────────────────────── */}
-      <section aria-labelledby="be-contact-heading" className="border-t border-border/60 bg-secondary/30 py-16">
+      <section
+        aria-labelledby="be-contact-heading"
+        className="border-t border-border/60 bg-secondary/30 py-16"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="flex flex-col items-center justify-between gap-8 rounded-[1.75rem] border border-border bg-card p-8 text-center shadow-card md:flex-row md:text-left">
               <div>
-                <h2 id="be-contact-heading" className="font-display text-xl font-semibold text-foreground">
+                <h2
+                  id="be-contact-heading"
+                  className="font-display text-xl font-semibold text-foreground"
+                >
                   Ready to Discuss Your Website Project?
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground max-w-xl">
-                  Contact us to receive a clear recommendation and transparent pricing for your Belgian business website.
+                  Contact us to receive a clear recommendation and transparent pricing for your
+                  Belgian business website.
                 </p>
                 <div className="mt-4 flex flex-col gap-1 text-xs text-muted-foreground">
-                  <span className="font-semibold text-foreground">{businessIdentity.addressLabel}</span>
-                  <span>{businessIdentity.streetAddress}, {businessIdentity.postalCode} {businessIdentity.cityFr}, {businessIdentity.country}</span>
-                  <a href={`tel:${businessIdentity.phonePlain}`} className="hover:text-primary transition">
+                  <span className="font-semibold text-foreground">
+                    {businessIdentity.addressLabel}
+                  </span>
+                  <span>
+                    {businessIdentity.streetAddress}, {businessIdentity.postalCode}{" "}
+                    {businessIdentity.cityFr}, {businessIdentity.country}
+                  </span>
+                  <a
+                    href={`tel:${businessIdentity.phonePlain}`}
+                    className="hover:text-primary transition"
+                  >
                     {businessIdentity.phone}
                   </a>
-                  <a href={`mailto:${businessIdentity.email}`} className="hover:text-primary transition">
+                  <a
+                    href={`mailto:${businessIdentity.email}`}
+                    className="hover:text-primary transition"
+                  >
                     {businessIdentity.email}
                   </a>
                 </div>

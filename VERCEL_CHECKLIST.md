@@ -189,6 +189,6 @@ If something goes wrong:
 
 ---
 
-**Deployment Date:** ******\_\_\_******  
-**Deployed By:** ******\_\_\_******  
-**Status:** ******\_\_\_******
+**Deployment Date:** **\*\***\_\_\_**\*\***  
+**Deployed By:** **\*\***\_\_\_**\*\***  
+**Status:** **\*\***\_\_\_**\*\***

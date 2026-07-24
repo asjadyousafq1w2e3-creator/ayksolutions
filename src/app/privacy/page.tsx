@@ -16,10 +16,17 @@ export default function PrivacyPolicyPage() {
     <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
       {/* Dev notice — remove before production */}
       <div className="mb-8 rounded-2xl border-2 border-dashed border-amber-400/60 bg-amber-50/50 p-5">
-        <p className="text-xs font-bold uppercase tracking-wider text-amber-700">Development Notice</p>
+        <p className="text-xs font-bold uppercase tracking-wider text-amber-700">
+          Development Notice
+        </p>
         <p className="mt-1 text-sm text-amber-700">
-          This privacy policy was drafted using standard templates and your confirmed business details.
-          <strong> Have this reviewed by a qualified lawyer before enabling public indexing or promoting the page.</strong>
+          This privacy policy was drafted using standard templates and your confirmed business
+          details.
+          <strong>
+            {" "}
+            Have this reviewed by a qualified lawyer before enabling public indexing or promoting
+            the page.
+          </strong>
         </p>
       </div>
 
@@ -33,12 +40,16 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="font-display text-lg font-semibold text-foreground">1. Who We Are</h2>
           <p className="mt-3">
-            {businessIdentity.name} (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) operates the website{" "}
-            <a href={businessIdentity.website} className="text-primary hover:underline">{businessIdentity.website}</a>.
+            {businessIdentity.name} (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) operates the
+            website{" "}
+            <a href={businessIdentity.website} className="text-primary hover:underline">
+              {businessIdentity.website}
+            </a>
+            .
           </p>
           <p className="mt-2">
-            Business contact address: {businessIdentity.streetAddress}, {businessIdentity.postalCode}{" "}
-            {businessIdentity.cityFr}, {businessIdentity.country}.
+            Business contact address: {businessIdentity.streetAddress},{" "}
+            {businessIdentity.postalCode} {businessIdentity.cityFr}, {businessIdentity.country}.
           </p>
           <p className="mt-2">
             Email:{" "}
@@ -49,19 +60,28 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">2. What Data We Collect</h2>
-          <p className="mt-3">We may collect the following data when you use our website or contact us:</p>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            2. What Data We Collect
+          </h2>
+          <p className="mt-3">
+            We may collect the following data when you use our website or contact us:
+          </p>
           <ul className="mt-3 list-disc pl-5 space-y-1">
             <li>Name and email address (when you submit a contact form or enquiry)</li>
             <li>Phone number (if provided voluntarily)</li>
             <li>Business name and website URL (if provided)</li>
             <li>Message content submitted through our contact form</li>
-            <li>Technical data: IP address, browser type, pages visited, time on site (via analytics tools)</li>
+            <li>
+              Technical data: IP address, browser type, pages visited, time on site (via analytics
+              tools)
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">3. How We Use Your Data</h2>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            3. How We Use Your Data
+          </h2>
           <p className="mt-3">We use personal data to:</p>
           <ul className="mt-3 list-disc pl-5 space-y-1">
             <li>Respond to enquiries and quotation requests</li>
@@ -76,23 +96,31 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">4. Legal Basis for Processing (GDPR)</h2>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            4. Legal Basis for Processing (GDPR)
+          </h2>
           <p className="mt-3">
-            For users in the European Economic Area (including Belgium), we process personal data
-            on the following legal bases:
+            For users in the European Economic Area (including Belgium), we process personal data on
+            the following legal bases:
           </p>
           <ul className="mt-3 list-disc pl-5 space-y-1">
-            <li><strong>Consent:</strong> when you submit a contact form</li>
-            <li><strong>Legitimate interests:</strong> for website analytics and service improvement</li>
-            <li><strong>Contractual necessity:</strong> to deliver agreed services to clients</li>
+            <li>
+              <strong>Consent:</strong> when you submit a contact form
+            </li>
+            <li>
+              <strong>Legitimate interests:</strong> for website analytics and service improvement
+            </li>
+            <li>
+              <strong>Contractual necessity:</strong> to deliver agreed services to clients
+            </li>
           </ul>
         </section>
 
         <section>
           <h2 className="font-display text-lg font-semibold text-foreground">5. Data Retention</h2>
           <p className="mt-3">
-            We retain contact enquiry data for no longer than three years unless a continuing
-            client relationship requires longer retention. Analytics data is anonymised and retained
+            We retain contact enquiry data for no longer than three years unless a continuing client
+            relationship requires longer retention. Analytics data is anonymised and retained
             according to the applicable analytics platform settings.
           </p>
         </section>
@@ -101,8 +129,10 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-lg font-semibold text-foreground">6. Cookies</h2>
           <p className="mt-3">
             This website may use cookies for analytics and performance purposes. See our{" "}
-            <Link href="/cookies" className="text-primary hover:underline">Cookie Policy</Link> for
-            full details.
+            <Link href="/cookies" className="text-primary hover:underline">
+              Cookie Policy
+            </Link>{" "}
+            for full details.
           </p>
         </section>
 
@@ -120,12 +150,15 @@ export default function PrivacyPolicyPage() {
             To exercise your rights, contact us at{" "}
             <a href={`mailto:${businessIdentity.email}`} className="text-primary hover:underline">
               {businessIdentity.email}
-            </a>.
+            </a>
+            .
           </p>
         </section>
 
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">8. Third-Party Services</h2>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            8. Third-Party Services
+          </h2>
           <p className="mt-3">
             We may use third-party tools such as Google Analytics. These services have their own
             privacy policies and may set cookies on your device.
@@ -133,10 +166,12 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">9. Changes to This Policy</h2>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            9. Changes to This Policy
+          </h2>
           <p className="mt-3">
-            We may update this privacy policy periodically. Any material changes will be noted
-            with an updated &quot;Last updated&quot; date at the top of this page.
+            We may update this privacy policy periodically. Any material changes will be noted with
+            an updated &quot;Last updated&quot; date at the top of this page.
           </p>
         </section>
 
@@ -153,10 +188,7 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <div className="border-t border-border pt-6">
-          <Link
-            href="/"
-            className="text-xs font-semibold text-primary hover:underline"
-          >
+          <Link href="/" className="text-xs font-semibold text-primary hover:underline">
             ← Back to Home
           </Link>
         </div>

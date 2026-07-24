@@ -107,7 +107,10 @@ export default function InsightsPage() {
       </section>
 
       {/* ── TOPICS ────────────────────────────────────────────────────────── */}
-      <section aria-label="Content topics" className="border-t border-border/60 bg-secondary/30 py-8">
+      <section
+        aria-label="Content topics"
+        className="border-t border-border/60 bg-secondary/30 py-8"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-wrap gap-2">
             {topics.map((topic) => (
@@ -123,14 +126,21 @@ export default function InsightsPage() {
       </section>
 
       {/* ── COMING SOON ARTICLES ──────────────────────────────────────────── */}
-      <section aria-labelledby="articles-heading" className="border-t border-border/60 bg-background py-20">
+      <section
+        aria-labelledby="articles-heading"
+        className="border-t border-border/60 bg-background py-20"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <h2 id="articles-heading" className="font-display text-2xl font-semibold text-foreground">
+            <h2
+              id="articles-heading"
+              className="font-display text-2xl font-semibold text-foreground"
+            >
               Upcoming Articles
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Our first articles are being written. Subscribe below to be notified when they publish.
+              Our first articles are being written. Subscribe below to be notified when they
+              publish.
             </p>
           </Reveal>
 
@@ -166,7 +176,10 @@ export default function InsightsPage() {
       </section>
 
       {/* ── NEWSLETTER SIGN-UP ────────────────────────────────────────────── */}
-      <section aria-labelledby="notify-heading" className="border-t border-border/60 bg-secondary/30 py-20">
+      <section
+        aria-labelledby="notify-heading"
+        className="border-t border-border/60 bg-secondary/30 py-20"
+      >
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <BookOpen size={32} className="mx-auto text-primary mb-4" aria-hidden="true" />
@@ -174,9 +187,9 @@ export default function InsightsPage() {
               Get Notified When New Articles Publish
             </h2>
             <p className="mt-3 text-sm leading-7 text-muted-foreground">
-              We publish practical guides on web design, SEO and online business for small businesses
-              in Belgium, Saudi Arabia, Europe and Australia. Contact us to be added to our
-              notification list.
+              We publish practical guides on web design, SEO and online business for small
+              businesses in Belgium, Saudi Arabia, Europe and Australia. Contact us to be added to
+              our notification list.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <Link

@@ -94,14 +94,16 @@ export function Footer() {
                   aria-label={`Email ${businessIdentity.email}`}
                   className="flex items-center gap-2.5 transition hover:text-primary"
                 >
-                  <Mail size={15} className="text-primary" aria-hidden="true" /> {businessIdentity.email}
+                  <Mail size={15} className="text-primary" aria-hidden="true" />{" "}
+                  {businessIdentity.email}
                 </a>
                 <a
                   href={`tel:${businessIdentity.phonePlain}`}
                   aria-label={`Call ${businessIdentity.phone}`}
                   className="flex items-center gap-2.5 transition hover:text-primary"
                 >
-                  <Phone size={15} className="text-primary" aria-hidden="true" /> {businessIdentity.phone}
+                  <Phone size={15} className="text-primary" aria-hidden="true" />{" "}
+                  {businessIdentity.phone}
                 </a>
                 <div className="flex items-start gap-2.5">
                   <MapPin size={15} className="text-primary mt-0.5 shrink-0" aria-hidden="true" />
@@ -130,12 +132,36 @@ export function Footer() {
                 Company
               </h4>
               <ul className="space-y-3 text-sm text-white/75">
-                <li><Link href="/about" className="transition hover:text-primary">About</Link></li>
-                <li><Link href="/projects" className="transition hover:text-primary">Projects</Link></li>
-                <li><Link href="/services" className="transition hover:text-primary">Services</Link></li>
-                <li><Link href="/pricing" className="transition hover:text-primary">Pricing</Link></li>
-                <li><Link href="/insights" className="transition hover:text-primary">Insights</Link></li>
-                <li><Link href="/contact" className="transition hover:text-primary">Contact</Link></li>
+                <li>
+                  <Link href="/about" className="transition hover:text-primary">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/projects" className="transition hover:text-primary">
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="transition hover:text-primary">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing" className="transition hover:text-primary">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/insights" className="transition hover:text-primary">
+                    Insights
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="transition hover:text-primary">
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -150,22 +176,36 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/be/fr/creation-site-web-belgique/" className="transition hover:text-primary" lang="fr">
+                  <Link
+                    href="/be/fr/creation-site-web-belgique/"
+                    className="transition hover:text-primary"
+                    lang="fr"
+                  >
                     🇧🇪 Belgique (FR)
                   </Link>
                 </li>
                 <li>
-                  <Link href="/be/nl/webdesign-belgie/" className="transition hover:text-primary" lang="nl">
+                  <Link
+                    href="/be/nl/webdesign-belgie/"
+                    className="transition hover:text-primary"
+                    lang="nl"
+                  >
                     🇧🇪 België (NL)
                   </Link>
                 </li>
                 <li>
-                  <Link href="/sa/en/web-design-saudi-arabia/" className="transition hover:text-primary">
+                  <Link
+                    href="/sa/en/web-design-saudi-arabia/"
+                    className="transition hover:text-primary"
+                  >
                     🇸🇦 Saudi Arabia
                   </Link>
                 </li>
                 <li>
-                  <Link href="/au/en/small-business-web-design/" className="transition hover:text-primary">
+                  <Link
+                    href="/au/en/small-business-web-design/"
+                    className="transition hover:text-primary"
+                  >
                     🇦🇺 Australia
                   </Link>
                 </li>
@@ -177,7 +217,9 @@ export function Footer() {
           <div className="border-t border-white/10 bg-black/20 px-6 py-6 sm:px-10">
             <div className="flex flex-col gap-4 text-xs text-white/60">
               <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-                <span>© {new Date().getFullYear()} {businessIdentity.name}. All rights reserved.</span>
+                <span>
+                  © {new Date().getFullYear()} {businessIdentity.name}. All rights reserved.
+                </span>
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 font-semibold text-white/80 transition hover:text-primary"
@@ -186,10 +228,19 @@ export function Footer() {
                 </Link>
               </div>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-white/10 pt-4">
-                <Link href="/privacy" className="transition hover:text-white/90">Privacy Policy</Link>
-                <Link href="/cookies" className="transition hover:text-white/90">Cookie Policy</Link>
-                <Link href="/terms" className="transition hover:text-white/90">Terms</Link>
-                <span className="ml-auto text-white/40">{businessIdentity.addressLabel}: {businessIdentity.streetAddress}, {businessIdentity.postalCode} {businessIdentity.cityFr}</span>
+                <Link href="/privacy" className="transition hover:text-white/90">
+                  Privacy Policy
+                </Link>
+                <Link href="/cookies" className="transition hover:text-white/90">
+                  Cookie Policy
+                </Link>
+                <Link href="/terms" className="transition hover:text-white/90">
+                  Terms
+                </Link>
+                <span className="ml-auto text-white/40">
+                  {businessIdentity.addressLabel}: {businessIdentity.streetAddress},{" "}
+                  {businessIdentity.postalCode} {businessIdentity.cityFr}
+                </span>
               </div>
             </div>
           </div>

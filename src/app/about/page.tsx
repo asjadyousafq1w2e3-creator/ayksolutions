@@ -70,8 +70,8 @@ export default function AboutPage() {
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
               AYK Solutions helps small businesses in Belgium, Saudi Arabia, Europe and Australia
               build professional websites and digital systems that earn customer trust, explain
-              services clearly and generate more enquiries. We focus on clear communication,
-              honest scope and reliable delivery.
+              services clearly and generate more enquiries. We focus on clear communication, honest
+              scope and reliable delivery.
             </p>
             <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-medium text-muted-foreground shadow-soft">
               <Globe size={12} className="text-primary" aria-hidden="true" />

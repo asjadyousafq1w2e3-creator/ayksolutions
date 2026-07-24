@@ -4,7 +4,8 @@ import { businessIdentity } from "@/data/businessIdentity";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | AYK Solutions",
-  description: "Cookie policy for AYK Solutions website — what cookies we use and how to manage them.",
+  description:
+    "Cookie policy for AYK Solutions website — what cookies we use and how to manage them.",
   robots: { index: true, follow: false },
   alternates: { canonical: "https://ayksolutions.com/cookies/" },
 };
@@ -15,7 +16,9 @@ export default function CookiePolicyPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
       <div className="mb-8 rounded-2xl border-2 border-dashed border-amber-400/60 bg-amber-50/50 p-5">
-        <p className="text-xs font-bold uppercase tracking-wider text-amber-700">Development Notice</p>
+        <p className="text-xs font-bold uppercase tracking-wider text-amber-700">
+          Development Notice
+        </p>
         <p className="mt-1 text-sm text-amber-700">
           Review and update cookie categories to accurately reflect the specific cookies your
           deployed site uses. Have this reviewed by a qualified lawyer before publication.
@@ -30,7 +33,9 @@ export default function CookiePolicyPage() {
 
       <div className="mt-10 space-y-8 text-sm leading-7 text-muted-foreground">
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">1. What Are Cookies?</h2>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            1. What Are Cookies?
+          </h2>
           <p className="mt-3">
             Cookies are small text files placed on your device by a website. They are widely used to
             make websites work, improve user experience and provide information to website owners.
@@ -38,10 +43,15 @@ export default function CookiePolicyPage() {
         </section>
 
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">2. How We Use Cookies</h2>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            2. How We Use Cookies
+          </h2>
           <p className="mt-3">
             {businessIdentity.name} uses the following categories of cookies on{" "}
-            <a href={businessIdentity.website} className="text-primary hover:underline">{businessIdentity.website}</a>:
+            <a href={businessIdentity.website} className="text-primary hover:underline">
+              {businessIdentity.website}
+            </a>
+            :
           </p>
 
           <div className="mt-5 space-y-4">
@@ -70,18 +80,28 @@ export default function CookiePolicyPage() {
         </section>
 
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">3. Managing Cookies</h2>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            3. Managing Cookies
+          </h2>
           <p className="mt-3">
             You can control and delete cookies through your browser settings. Note that disabling
             cookies may affect website functionality. For more information, visit{" "}
-            <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+            <a
+              href="https://www.aboutcookies.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
               aboutcookies.org
-            </a>.
+            </a>
+            .
           </p>
         </section>
 
         <section>
-          <h2 className="font-display text-lg font-semibold text-foreground">4. Third-Party Cookies</h2>
+          <h2 className="font-display text-lg font-semibold text-foreground">
+            4. Third-Party Cookies
+          </h2>
           <p className="mt-3">
             Third-party services embedded in our website (such as Google Analytics) may set their
             own cookies. These are subject to the respective third party&apos;s privacy policy.
@@ -102,7 +122,10 @@ export default function CookiePolicyPage() {
           <Link href="/privacy" className="text-xs font-semibold text-primary hover:underline">
             Privacy Policy
           </Link>
-          <Link href="/" className="text-xs font-semibold text-muted-foreground hover:text-primary transition">
+          <Link
+            href="/"
+            className="text-xs font-semibold text-muted-foreground hover:text-primary transition"
+          >
             ← Back to Home
           </Link>
         </div>

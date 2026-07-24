@@ -4,7 +4,11 @@ import { projectsData } from "@/data/caseStudies";
 
 const domain = "https://ayksolutions.com";
 
-function url(path: string, priority: number, changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] = "monthly") {
+function url(
+  path: string,
+  priority: number,
+  changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] = "monthly",
+) {
   return {
     url: `${domain}${path}`,
     lastModified: new Date(),
@@ -14,13 +18,9 @@ function url(path: string, priority: number, changeFrequency: MetadataRoute.Site
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const servicePages = services.map((s) =>
-    url(`/services/${s.slug}/`, 0.8),
-  );
+  const servicePages = services.map((s) => url(`/services/${s.slug}/`, 0.8));
 
-  const projectPages = projectsData.map((p) =>
-    url(`/projects/${p.slug}/`, 0.7),
-  );
+  const projectPages = projectsData.map((p) => url(`/projects/${p.slug}/`, 0.7));
 
   return [
     // ── Global core pages ─────────────────────────────────────────────────────

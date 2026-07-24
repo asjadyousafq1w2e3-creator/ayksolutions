@@ -94,11 +94,31 @@ const solutionFeatures = [
 ];
 
 const launchProcess = [
-  { num: "01", title: "Discovery and content", body: "We clarify your goals, audience, services and content before any design begins." },
-  { num: "02", title: "Structure and design", body: "Page layouts, mobile-first design and visual identity reviewed and approved by you." },
-  { num: "03", title: "Development", body: "Production-quality build on proven technology — fast, secure and maintainable." },
-  { num: "04", title: "Review and refinement", body: "You review the live preview. Feedback is incorporated before launch." },
-  { num: "05", title: "Testing and launch", body: "Cross-device testing, SEO checks, performance review and go-live." },
+  {
+    num: "01",
+    title: "Discovery and content",
+    body: "We clarify your goals, audience, services and content before any design begins.",
+  },
+  {
+    num: "02",
+    title: "Structure and design",
+    body: "Page layouts, mobile-first design and visual identity reviewed and approved by you.",
+  },
+  {
+    num: "03",
+    title: "Development",
+    body: "Production-quality build on proven technology — fast, secure and maintainable.",
+  },
+  {
+    num: "04",
+    title: "Review and refinement",
+    body: "You review the live preview. Feedback is incorporated before launch.",
+  },
+  {
+    num: "05",
+    title: "Testing and launch",
+    body: "Cross-device testing, SEO checks, performance review and go-live.",
+  },
 ];
 
 const trustCards = [
@@ -179,7 +199,13 @@ export default function Home() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 bg-gradient-hero" />
           <div className="absolute inset-0 opacity-[0.08] mix-blend-multiply">
-            <Image src="/footer-bg-image.png" alt="" fill sizes="100vw" className="block h-full w-full object-cover object-center" />
+            <Image
+              src="/footer-bg-image.png"
+              alt=""
+              fill
+              sizes="100vw"
+              className="block h-full w-full object-cover object-center"
+            />
           </div>
           <div className="absolute inset-0 brand-grid animate-grid-drift opacity-100 [mask-image:radial-gradient(ellipse_at_top,black_50%,transparent_80%)]" />
           <div className="absolute inset-0 matrix-grid animate-matrix-grid opacity-100 [mask-image:radial-gradient(ellipse_at_top,black_50%,transparent_80%)]" />
@@ -188,7 +214,6 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-24 pb-12 sm:pt-28 md:pt-36 md:pb-16 lg:flex lg:min-h-[calc(100svh-4rem)] lg:flex-col lg:justify-center lg:pt-36">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center lg:gap-12">
-
             {/* Copy column */}
             <motion.div style={{ y: heroCopyY }}>
               <motion.p
@@ -236,7 +261,10 @@ export default function Home() {
                   className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition hover:bg-[#b80309]"
                 >
                   Get Your Free Website Consultation
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+                  <ArrowRight
+                    size={16}
+                    className="transition-transform group-hover:translate-x-0.5"
+                  />
                 </Link>
                 <Link
                   href="/projects"
@@ -301,7 +329,10 @@ export default function Home() {
                           <div className="hero-device-scan absolute inset-0 pointer-events-none rounded-[1.6rem]" />
                           <div className="mb-3 flex items-center justify-between">
                             <div className="flex items-center gap-2">
-                              <span className="h-2.5 w-2.5 rounded-full bg-primary" aria-hidden="true" />
+                              <span
+                                className="h-2.5 w-2.5 rounded-full bg-primary"
+                                aria-hidden="true"
+                              />
                               <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                                 Responsive design preview
                               </span>
@@ -383,7 +414,10 @@ export default function Home() {
             {websiteProblems.map((problem, i) => (
               <Reveal key={problem} delay={i * 0.04}>
                 <div className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4 shadow-soft">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-500" aria-hidden="true">
+                  <span
+                    className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-500"
+                    aria-hidden="true"
+                  >
                     <span className="block h-2 w-2 rounded-full bg-red-500" />
                   </span>
                   <p className="text-xs font-medium leading-5 text-foreground/85">{problem}</p>
@@ -399,7 +433,8 @@ export default function Home() {
               </h3>
               <p className="mt-4 mx-auto max-w-2xl text-sm leading-7 text-muted-foreground">
                 AYK Solutions creates websites that present your business professionally, explain
-                your value clearly and guide visitors toward enquiries, bookings, calls or purchases.
+                your value clearly and guide visitors toward enquiries, bookings, calls or
+                purchases.
               </p>
               <Link
                 href="/contact"
@@ -497,7 +532,9 @@ export default function Home() {
                   <span className="font-display text-3xl font-bold text-primary/20 group-hover:text-primary/40 transition">
                     {step.num}
                   </span>
-                  <h3 className="font-display text-sm font-semibold text-foreground">{step.title}</h3>
+                  <h3 className="font-display text-sm font-semibold text-foreground">
+                    {step.title}
+                  </h3>
                   <p className="text-xs leading-5 text-muted-foreground">{step.body}</p>
                 </div>
               </Reveal>
@@ -507,7 +544,8 @@ export default function Home() {
           <Reveal delay={0.3}>
             <p className="mt-8 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
               The final delivery time depends on project scope, client feedback and the availability
-              of content and assets. Seven-day delivery applies to eligible standard business websites.
+              of content and assets. Seven-day delivery applies to eligible standard business
+              websites.
             </p>
           </Reveal>
         </div>
@@ -544,7 +582,9 @@ export default function Home() {
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
                       <Icon size={20} aria-hidden="true" />
                     </div>
-                    <h3 className="font-display text-base font-semibold text-foreground">{card.title}</h3>
+                    <h3 className="font-display text-base font-semibold text-foreground">
+                      {card.title}
+                    </h3>
                     <p className="text-sm leading-6 text-muted-foreground">{card.body}</p>
                   </div>
                 </Reveal>
@@ -598,7 +638,10 @@ export default function Home() {
                 className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground shadow-soft transition hover:bg-[#b80309]"
               >
                 Start Your Website Project
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-0.5"
+                />
               </Link>
               <a
                 href="https://wa.me/32466317714?text=Hi%20AYK%20Solutions%2C%20I%27d%20like%20to%20discuss%20a%20project."
@@ -651,7 +694,11 @@ function FeaturedProjectsSection({ studies }: { studies: CaseStudy[] }) {
               aria-label={`View all ${caseStudies.length} projects`}
             >
               View All Projects ({caseStudies.length})
-              <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              <ArrowRight
+                size={14}
+                className="transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              />
             </Link>
           </div>
         </Reveal>
