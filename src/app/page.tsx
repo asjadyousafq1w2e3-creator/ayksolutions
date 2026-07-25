@@ -121,39 +121,6 @@ const launchProcess = [
   },
 ];
 
-const trustCards = [
-  {
-    icon: BadgeCheck,
-    title: "Clear Scope Before Development",
-    body: "You receive a documented project scope covering the pages, features, cost and expected delivery process.",
-  },
-  {
-    icon: MonitorSmartphone,
-    title: "Visible Progress",
-    body: "We share updates and review links during development, so you are never left wondering what is happening.",
-  },
-  {
-    icon: Globe,
-    title: "International Communication",
-    body: "Work remotely with a development partner serving businesses across Belgium, Saudi Arabia, Europe and Australia.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Mobile-First Quality",
-    body: "Every website is designed and tested across modern desktop, tablet and mobile experiences.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Final Review",
-    body: "Review all agreed deliverables before the final milestone is completed.",
-  },
-  {
-    icon: Rocket,
-    title: "Post-Launch Assistance",
-    body: "Receive support after launch for a smoother transition and reliable website operation.",
-  },
-];
-
 const featuredCaseStudies = caseStudies.slice(0, 4);
 
 // ── Helper components ────────────────────────────────────────────────────────
@@ -222,7 +189,7 @@ export default function Home() {
                 transition={{ duration: 0.45 }}
                 className="section-kicker"
               >
-                AYK Solutions — Belgium &amp; International
+                AYK Solutions
               </motion.p>
 
               <motion.h1
@@ -242,10 +209,8 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.22 }}
                 className="mt-4 max-w-xl text-sm leading-6 text-muted-foreground md:text-base"
               >
-                We design fast, professional and conversion-focused websites for small businesses in
-                Belgium, Saudi Arabia, Europe and Australia. Establish your online presence, improve
-                customer confidence and launch in{" "}
-                <span className="font-semibold text-foreground">as little as seven days.</span>
+                We design fast, professional and conversion-focused websites that build trust,
+                explain your services clearly and generate qualified enquiries.
               </motion.p>
 
               {/* CTAs */}
@@ -525,81 +490,55 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-5">
-            {launchProcess.map((step, i) => (
-              <Reveal key={step.num} delay={i * 0.07}>
-                <div className="group relative flex flex-col gap-3 rounded-2xl border border-border bg-card p-5 shadow-soft transition hover:-translate-y-1 hover:border-primary/40">
-                  <span className="font-display text-3xl font-bold text-primary/20 group-hover:text-primary/40 transition">
-                    {step.num}
-                  </span>
-                  <h3 className="font-display text-sm font-semibold text-foreground">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs leading-5 text-muted-foreground">{step.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={0.3}>
-            <p className="mt-8 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
-              The final delivery time depends on project scope, client feedback and the availability
-              of content and assets. Seven-day delivery applies to eligible standard business
-              websites.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ── TRUST CARDS ────────────────────────────────────────────────────── */}
-      <section
-        id="trust"
-        aria-labelledby="trust-heading"
-        className="relative overflow-hidden border-t border-border/70 bg-gradient-to-b from-secondary/30 to-background py-20"
-      >
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal>
-            <div className="text-center max-w-3xl mx-auto">
-              <h2
-                id="trust-heading"
-                className="font-display text-3xl font-semibold tracking-tight md:text-4xl text-foreground"
-              >
-                Why Businesses Trust AYK Solutions
-              </h2>
-              <p className="mt-4 text-base leading-7 text-muted-foreground">
-                International experience, personal communication. Work directly with a development
-                partner who keeps the process clear, responsive and focused on your business goals.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {trustCards.map((card, i) => {
-              const Icon = card.icon;
+          <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-5">
+            {launchProcess.map((step, i) => {
+              const isLast = i === launchProcess.length - 1;
               return (
-                <Reveal key={card.title} delay={i * 0.06}>
-                  <div className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:border-primary/40">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
-                      <Icon size={20} aria-hidden="true" />
+                <Reveal
+                  key={step.num}
+                  delay={i * 0.08}
+                  className={i === 4 ? "col-span-2 lg:col-span-1" : ""}
+                >
+                  <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card p-4 sm:p-5 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-card">
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <span className="font-display text-2xl sm:text-3xl font-bold text-primary/30 group-hover:text-primary transition-colors duration-300">
+                          {step.num}
+                        </span>
+                        {!isLast && (
+                          <motion.div
+                            animate={{ x: [0, 4, 0] }}
+                            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                            className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+                            aria-hidden="true"
+                          >
+                            <ArrowRight size={13} />
+                          </motion.div>
+                        )}
+                      </div>
+                      <h3 className="mt-3 font-display text-xs sm:text-sm font-semibold text-foreground">
+                        {step.title}
+                      </h3>
+                      <p className="mt-1.5 text-[11px] sm:text-xs leading-4 sm:leading-5 text-muted-foreground">
+                        {step.body}
+                      </p>
                     </div>
-                    <h3 className="font-display text-base font-semibold text-foreground">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm leading-6 text-muted-foreground">{card.body}</p>
+
+                    {/* Animated accent line */}
+                    <div className="mt-4 h-1 w-full overflow-hidden rounded-full bg-secondary">
+                      <motion.div
+                        initial={{ width: "0%" }}
+                        whileInView={{ width: "100%" }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: i * 0.15 }}
+                        className="h-full bg-gradient-to-r from-primary/40 to-primary"
+                      />
+                    </div>
                   </div>
                 </Reveal>
               );
             })}
           </div>
-
-          <Reveal delay={0.3}>
-            <p className="mt-10 text-center text-sm font-semibold text-muted-foreground">
-              No hidden development charges. No confusing process. No disappearing after launch.
-            </p>
-            <p className="mt-2 text-center text-xs text-muted-foreground">
-              Serving small businesses remotely across Belgium, Saudi Arabia, Europe and Australia.
-            </p>
-          </Reveal>
         </div>
       </section>
 

@@ -279,11 +279,7 @@ function ContactPageContent() {
               href="mailto:hello@ayksolutions.com"
             />
             <InfoCard icon={Phone} title="Phone" body="+32 466 31 77 14" href="tel:+32466317714" />
-            <InfoCard
-              icon={MapPin}
-              title="Location"
-              body="Bruxelles, Belgium"
-            />
+            <InfoCard icon={MapPin} title="Location" body="Bruxelles, Belgium" />
             <InfoCard icon={Clock} title="Response time" body="Within one business day" />
             <InfoCard
               icon={ShieldCheck}
