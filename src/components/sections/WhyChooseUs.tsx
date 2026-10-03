@@ -15,26 +15,16 @@ import { Reveal } from "@/components/Reveal";
 
 const othersLack = [
   "Generic templates",
-  "Limited revisions",
   "Slow communication",
-  "No conversion strategy",
   "Poor mobile experience",
-  "No post-launch support",
   "Hidden additional costs",
-  "Website delivered without guidance",
 ];
 
-const aykDelivers = [
+const novalixDelivers = [
   "Custom business-focused design",
   "Clear project scope and communication",
   "Mobile-first responsive experience",
-  "Lead-generation and conversion features",
-  "SEO-ready website structure",
-  "WhatsApp, forms and analytics integration",
   "Transparent pricing",
-  "Post-launch support and maintenance",
-  "Fast and organized delivery",
-  "Solutions designed around business goals",
 ];
 
 const valueCards = [
@@ -63,7 +53,7 @@ const valueCards = [
 export function WhyChooseUs() {
   return (
     <section
-      id="why-ayk"
+      id="why-novalix"
       className="relative overflow-hidden border-t border-border/70 bg-background py-20"
     >
       <div className="mx-auto max-w-7xl px-6">
@@ -72,22 +62,20 @@ export function WhyChooseUs() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-primary">
               <Sparkles size={12} />
-              WHY AYK SOLUTIONS
+              WHY NOVALIX
             </div>
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl text-foreground">
               <span className="gradient-text">More Than</span> Just a Website
             </h2>
             <p className="mt-4 text-base leading-7 text-muted-foreground">
-              We do not simply build websites. We create reliable digital systems that help
-              businesses look professional, capture more leads, automate repetitive work and grow
-              with confidence.
+              We build useful software and keep the process clear.
             </p>
           </div>
         </Reveal>
 
-        {/* Two-Column Comparison (Desktop: Left vs Right; Mobile: AYK Solutions first) */}
+        {/* Two-Column Comparison (Desktop: Left vs Right; Mobile: Novalix first) */}
         <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:items-stretch">
-          {/* AYK Solutions Delivers Card (Shown first on mobile using order-first lg:order-last) */}
+          {/* Novalix Delivers Card (Shown first on mobile using order-first lg:order-last) */}
           <Reveal delay={0.1} className="order-first lg:order-last flex">
             <div className="relative flex w-full flex-col justify-between overflow-hidden rounded-[1.75rem] border border-primary/35 bg-gradient-to-b from-card via-card to-primary/5 p-6 shadow-card transition-all duration-300 hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(214,9,18,0.12)] sm:p-8">
               {/* Subtle ambient red glow */}
@@ -101,13 +89,13 @@ export function WhyChooseUs() {
                       Built for Business Growth
                     </span>
                     <h3 className="mt-2.5 font-display text-2xl font-semibold text-foreground">
-                      What You Get With Ayk Solutions
+                      What You Get With Novalix
                     </h3>
                   </div>
                 </div>
 
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {aykDelivers.map((item) => (
+                  {novalixDelivers.map((item) => (
                     <div
                       key={item}
                       className="flex items-start gap-2.5 text-xs font-medium text-foreground/90"

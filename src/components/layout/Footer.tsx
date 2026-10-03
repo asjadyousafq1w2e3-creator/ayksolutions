@@ -1,31 +1,13 @@
 "use client";
 
-import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Mail, MapPin, Phone, Sparkles } from "lucide-react";
 import { businessIdentity } from "@/data/businessIdentity";
 
 export function Footer() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end end"],
-  });
-
-  // Image is FIXED at viewport bottom (position: fixed; bottom: 0;).
-  // It NEVER moves or scrolls down.
-  // As user scrolls UP away from bottom (1 -> 0 over ~600px),
-  // the footer content slides down over the fixed image like a curtain,
-  // and the image opacity smoothly dissolves into the background color (#ffffff).
-  const imageOpacity = useTransform(scrollYProgress, [0, 0.45, 1], [0, 0.35, 1]);
-
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full overflow-x-hidden bg-white pb-64 sm:pb-80 md:pb-[340px]"
-    >
+    <div className="relative w-full overflow-hidden bg-white pb-64 dark:bg-background sm:pb-80 md:pb-[340px]">
       {/* Floating Footer Card Container — Positioned at z-10 so it slides OVER the fixed background image */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 pt-4 sm:px-6">
         <footer className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#0d0d0f] text-white shadow-[0_30px_90px_rgba(0,0,0,0.35)]">
@@ -44,7 +26,7 @@ export function Footer() {
                   Ready to get started?
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-white md:text-3xl">
-                  Build a website that earns your business more customers.
+                  Let’s build the system your business needs.
                 </h3>
               </div>
               <Link
@@ -63,39 +45,37 @@ export function Footer() {
           {/* Main Footer Links Grid */}
           <div className="grid gap-10 px-6 py-12 sm:px-10 md:grid-cols-4">
             <div className="max-w-sm md:col-span-2">
-              <Link href="/" className="flex items-center gap-3" aria-label="AYK Solutions home">
-                <div className="relative grid h-10 w-10 place-items-center overflow-hidden rounded-xl bg-white shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
+              <Link href="/" className="flex items-center gap-3" aria-label="Novalix home">
+                <div className="relative grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
                   <Image
-                    src="/ayk/logo.png"
+                    src="/transparent-logo.png"
                     alt=""
-                    width={36}
-                    height={36}
-                    className="h-8 w-8 object-contain"
+                    width={55}
+                    height={50}
+                    className="h-auto w-8 object-contain"
                   />
                 </div>
                 <div className="leading-none">
                   <span className="block font-display text-base font-bold uppercase tracking-[0.16em]">
-                    AYK
+                    Novalix
                   </span>
                   <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.26em] text-white/60">
-                    Solutions
+                    .tech
                   </span>
                 </div>
               </Link>
 
               <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
-                We design and build professional digital products for ambitious businesses — from
-                high-performing websites to custom web applications and automations.
+                POS, cloud inventory and web systems for growing businesses.
               </p>
 
               <div className="mt-6 flex flex-col gap-2 text-sm text-white/70">
                 <a
                   href={`mailto:${businessIdentity.email}`}
-                  aria-label={`Email ${businessIdentity.email}`}
+                  aria-label="Email Novalix"
                   className="flex items-center gap-2.5 transition hover:text-primary"
                 >
-                  <Mail size={15} className="text-primary" aria-hidden="true" />{" "}
-                  {businessIdentity.email}
+                  <Mail size={15} className="text-primary" aria-hidden="true" /> Email Novalix
                 </a>
                 <a
                   href={`tel:${businessIdentity.phonePlain}`}
@@ -117,7 +97,7 @@ export function Footer() {
                 href={businessIdentity.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Chat with AYK Solutions on WhatsApp"
+                aria-label="Chat with Novalix on WhatsApp"
                 className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-4 py-2 text-xs font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true">
@@ -247,25 +227,19 @@ export function Footer() {
         </footer>
       </div>
 
-      {/* FIXED VIEWPORT-BOTTOM Background Image Scene — Positioned at fixed bottom-0 (Never moves) */}
-      <motion.div
-        style={{ opacity: imageOpacity }}
-        className="fixed bottom-0 left-0 right-0 z-0 pointer-events-none w-full overflow-hidden leading-none"
+      <div
+        className="absolute bottom-0 left-0 right-0 z-0 pointer-events-none h-64 w-full overflow-hidden sm:h-80 md:h-[340px]"
         aria-hidden="true"
       >
-        <div className="relative h-[260px] w-full overflow-hidden sm:h-[340px] md:h-auto">
-          {/* Smooth linear gradient from white background */}
-          <div className="absolute inset-x-0 top-0 z-10 h-28 bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none" />
-
-          <Image
-            src="/footer-bg-image.png"
-            alt=""
-            width={1920}
-            height={500}
-            className="absolute bottom-0 left-1/2 block h-full w-auto min-w-[880px] max-w-none -translate-x-1/2 object-cover object-center md:relative md:bottom-auto md:left-0 md:h-auto md:w-full md:min-w-0 md:max-w-full md:translate-x-0 md:object-contain"
-          />
-        </div>
-      </motion.div>
+        <Image
+          src="/footer.png"
+          alt=""
+          fill
+          unoptimized
+          sizes="100vw"
+          className="object-cover object-bottom dark:invert dark:hue-rotate-180"
+        />
+      </div>
     </div>
   );
 }

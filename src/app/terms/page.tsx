@@ -3,10 +3,10 @@ import Link from "next/link";
 import { businessIdentity } from "@/data/businessIdentity";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | AYK Solutions",
-  description: "Terms and conditions governing the use of the AYK Solutions website and services.",
+  title: "Terms and Conditions | Novalix",
+  description: "Terms and conditions governing the use of the Novalix website and services.",
   robots: { index: true, follow: false },
-  alternates: { canonical: "https://ayksolutions.com/terms/" },
+  alternates: { canonical: "https://novalix.tech/terms/" },
 };
 
 const lastUpdated = "July 2026";

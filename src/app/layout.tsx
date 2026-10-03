@@ -19,17 +19,23 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const domain = "https://ayksolutions.com";
+const domain = "https://novalix.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(domain),
   title: {
-    default: "Professional Website Design for Small Businesses | AYK Solutions",
-    template: "%s | AYK Solutions",
+    default: "POS Systems, Cloud Inventory & Web Systems | Novalix",
+    template: "%s | Novalix",
   },
   description:
-    "AYK Solutions designs fast, mobile-first and conversion-focused websites for small businesses in Belgium, Saudi Arabia, Europe and Australia. Launch your professional website in as little as seven days.",
+    "Novalix builds POS systems, cloud inventory and custom web systems. Explore Dine3D, our restaurant platform.",
   keywords: [
+    "Novalix",
+    "POS systems",
+    "restaurant POS",
+    "cloud inventory systems",
+    "web systems",
+    "Dine3D",
     "web design Belgium",
     "website development Belgium",
     "small business website Belgium",
@@ -45,9 +51,9 @@ export const metadata: Metadata = {
     "conversion-focused website",
     "mobile-first web design",
   ],
-  authors: [{ name: "AYK Solutions", url: domain }],
-  creator: "AYK Solutions",
-  publisher: "AYK Solutions",
+  authors: [{ name: "Novalix", url: domain }],
+  creator: "Novalix",
+  publisher: "Novalix",
   robots: {
     index: true,
     follow: true,
@@ -73,19 +79,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Professional Website Design for Small Businesses | AYK Solutions",
+    title: "POS Systems, Cloud Inventory & Web Systems | Novalix",
     description:
-      "Fast, mobile-first and conversion-focused websites for businesses in Belgium, Saudi Arabia, Europe and Australia. Launch in as little as seven days.",
+      "POS systems, cloud inventory and custom web systems from Novalix. Meet Dine3D for restaurants.",
     type: "website",
     url: domain,
-    siteName: "AYK Solutions",
+    siteName: "Novalix",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Website Design for Small Businesses | AYK Solutions",
-    description:
-      "Fast, mobile-first websites for small businesses in Belgium, Saudi Arabia, Europe and Australia.",
+    title: "POS Systems, Cloud Inventory & Web Systems | Novalix",
+    description: "POS systems, cloud inventory and web systems. Explore Dine3D.",
   },
   icons: {
     icon: [
@@ -113,13 +118,12 @@ function StructuredData() {
     url: domain,
     logo: {
       "@type": "ImageObject",
-      url: `${domain}/ayk/logo.png`,
-      width: 200,
-      height: 200,
+      url: `${domain}/transparent-logo.png`,
+      width: 524,
+      height: 476,
     },
     description:
-      "AYK Solutions builds professional websites, ecommerce stores, web applications and digital business systems for small and growing businesses internationally.",
-    email: businessIdentity.email,
+      "Novalix builds POS systems, cloud inventory and custom web systems, including Dine3D for restaurants.",
     telephone: businessIdentity.phone,
     address: {
       "@type": "PostalAddress",
@@ -132,7 +136,6 @@ function StructuredData() {
       "@type": "ContactPoint",
       telephone: businessIdentity.phone,
       contactType: "customer service",
-      email: businessIdentity.email,
       availableLanguage: ["English", "French", "Dutch", "Arabic"],
     },
     areaServed: [
@@ -152,9 +155,8 @@ function StructuredData() {
     "@type": "WebSite",
     "@id": `${domain}/#website`,
     url: domain,
-    name: "AYK Solutions",
-    description:
-      "Professional website design and web development for small businesses in Belgium, Saudi Arabia, Europe and Australia.",
+    name: "Novalix",
+    description: "POS systems, cloud inventory and custom web systems for growing businesses.",
     publisher: { "@id": `${domain}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
@@ -182,8 +184,13 @@ function StructuredData() {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${archivo.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${manrope.variable}`} suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem('novalix-theme')==='dark'){document.documentElement.classList.add('dark')}}catch(e){}`,
+          }}
+        />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <StructuredData />

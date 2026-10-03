@@ -15,6 +15,11 @@ const nextConfig = {
   typescript: {
     tsconfigPath: "./tsconfig.json",
   },
+  async redirects() {
+    return [
+      { source: "/projects/res3d-saas", destination: "/projects/dine3d", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

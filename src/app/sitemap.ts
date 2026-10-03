@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { services } from "@/data/services";
 import { projectsData } from "@/data/caseStudies";
 
-const domain = "https://ayksolutions.com";
+const domain = "https://novalix.tech";
 
 function url(
   path: string,

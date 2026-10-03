@@ -66,7 +66,7 @@ function buildMailto({
   service: string;
   message: string;
 }) {
-  const subject = encodeURIComponent(`Project brief from ${name || "AYK website visitor"}`);
+  const subject = encodeURIComponent(`Project brief from ${name || "Novalix website visitor"}`);
   const body = encodeURIComponent(
     [
       `Name: ${name}`,
@@ -244,7 +244,7 @@ function ContactPageContent() {
                 maxLength={1800}
                 rows={7}
                 placeholder="What are you trying to build? What problem should it solve? Any deadlines, integrations, or constraints we should know about?"
-                className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm leading-6 outline-none transition focus:border-ring focus:ring-2 focus:ring-ring/20"
+                className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm leading-6 outline-none transition focus:border-ring focus:ring-2 focus:ring-ring/20 dark:bg-card dark:text-foreground"
               />
             </div>
 
@@ -275,7 +275,7 @@ function ContactPageContent() {
             <InfoCard
               icon={Mail}
               title="Email"
-              body="hello@ayksolutions.com"
+              body="Email Novalix"
               href="mailto:hello@ayksolutions.com"
             />
             <InfoCard icon={Phone} title="Phone" body="+32 466 31 77 14" href="tel:+32466317714" />
@@ -286,16 +286,16 @@ function ContactPageContent() {
               title="Best fit"
               body="Websites, apps, automation, and custom software"
             />
-            <div className="metric-strip rounded-[1.5rem] p-5 text-background shadow-card">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-background/78">
+            <div className="metric-strip rounded-[1.5rem] p-5 text-white shadow-card">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/78">
                 Prefer email?
               </p>
-              <p className="mt-2 text-sm leading-6 text-background/84">
+              <p className="mt-2 text-sm leading-6 text-white/84">
                 You can send the same brief directly and we will reply from the same inbox.
               </p>
               <div className="mt-5 grid gap-2">
                 <a
-                  href="https://wa.me/32466317714?text=Hi%20AYK%20Solutions%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                  href="https://wa.me/32466317714?text=Hi%20Novalix%2C%20I%27d%20like%20to%20discuss%20a%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#1db954]"
@@ -311,14 +311,14 @@ function ContactPageContent() {
                   WhatsApp us now
                 </a>
                 <a
-                  href="mailto:hello@ayksolutions.com?subject=Project%20brief%20for%20AYK%20Solutions"
+                  href="mailto:hello@ayksolutions.com?subject=Project%20brief%20for%20Novalix"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-[#b8040b]"
                 >
                   Email project brief <ArrowRight size={15} />
                 </a>
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 px-4 py-3 text-sm font-semibold text-background transition hover:border-primary/60 hover:text-primary"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 px-4 py-3 text-sm font-semibold text-white transition hover:border-primary/60 hover:text-primary"
                 >
                   Review services
                 </Link>
@@ -393,7 +393,7 @@ function Field({
         name={name}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ring focus:ring-2 focus:ring-ring/20"
+        className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ring focus:ring-2 focus:ring-ring/20 dark:bg-card dark:text-foreground"
       />
     </div>
   );
@@ -419,7 +419,7 @@ function SelectField({
       <select
         name={name}
         defaultValue={selected}
-        className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ring focus:ring-2 focus:ring-ring/20"
+        className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ring focus:ring-2 focus:ring-ring/20 dark:bg-card dark:text-foreground"
       >
         <option value="">Select...</option>
         {values.map((option) => (

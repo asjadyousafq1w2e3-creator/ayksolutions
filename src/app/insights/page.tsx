@@ -4,14 +4,14 @@ import { ArrowRight, BookOpen, Clock, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Web Design Insights for Small Businesses | AYK Solutions",
+  title: "Web Design Insights for Small Businesses | Novalix",
   description:
     "Practical guides on website design, SEO, ecommerce and online presence for small businesses in Belgium, Saudi Arabia, Europe and Australia.",
   alternates: {
-    canonical: "https://ayksolutions.com/insights/",
+    canonical: "https://novalix.tech/insights/",
   },
   openGraph: {
-    title: "Web Design Insights for Small Businesses | AYK Solutions",
+    title: "Web Design Insights for Small Businesses | Novalix",
     description:
       "Practical guides on website design, SEO and online presence for small businesses.",
   },
@@ -89,7 +89,7 @@ export default function InsightsPage() {
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-primary mb-4">
               <Sparkles size={12} aria-hidden="true" />
-              AYK Insights
+              Novalix Insights
             </div>
             <h1
               id="insights-h1"

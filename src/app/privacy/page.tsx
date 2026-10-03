@@ -3,10 +3,10 @@ import Link from "next/link";
 import { businessIdentity } from "@/data/businessIdentity";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AYK Solutions",
-  description: "Privacy policy for AYK Solutions — how we collect, use and protect personal data.",
+  title: "Privacy Policy | Novalix",
+  description: "Privacy policy for Novalix — how we collect, use and protect personal data.",
   robots: { index: true, follow: false },
-  alternates: { canonical: "https://ayksolutions.com/privacy/" },
+  alternates: { canonical: "https://novalix.tech/privacy/" },
 };
 
 const lastUpdated = "July 2026";

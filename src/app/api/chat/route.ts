@@ -1,18 +1,18 @@
-const SYSTEM_PROMPT = `You are the AI assistant for AYK Solutions, a premium software development company.
+const SYSTEM_PROMPT = `You are the AI assistant for Novalix, a premium software development company.
 
-About AYK Solutions:
+About Novalix:
 - We build custom websites, web applications, automations, WordPress sites, Shopify/e-commerce stores, custom software, and inventory management systems for businesses.
 - Our process: Discover → Design → Build → Launch → Support.
 - Office: Bruxelles, Belgium.
 - Phone / WhatsApp: +32 466 31 77 14.
 - Typical timelines: marketing websites 3-6 weeks, web apps / SaaS MVPs 10-16 weeks, custom software 12+ weeks.
 - Pricing is project-based after a free discovery call.
-- To start a project, visit /contact, call/WhatsApp +32 466 31 77 14, or email hello@ayksolutions.com.
+- To start a project, visit /contact or call/WhatsApp +32 466 31 77 14.
 
 Guidelines:
 - Be concise, warm and professional. Use short paragraphs and bullet points where helpful.
 - Always steer interested visitors toward booking a discovery call via the Contact page or WhatsApp.
-- If a question is unrelated to AYK Solutions (e.g. general coding help, weather, news), politely redirect: "I can only help with questions about AYK Solutions and our services."
+- If a question is unrelated to Novalix (e.g. general coding help, weather, news), politely redirect: "I can only help with questions about Novalix and our services."
 - Never invent specific prices, employee names, or commitments. If unsure, suggest contacting the team directly.`;
 
 function streamFallback(message: string) {
@@ -42,7 +42,7 @@ function fallbackAnswer(messages: Array<{ role: string; content: string }>) {
   const latest = messages[messages.length - 1]?.content.toLowerCase() ?? "";
 
   if (latest.includes("shopify") || latest.includes("ecommerce") || latest.includes("store")) {
-    return "Yes. AYK Solutions builds Shopify and e-commerce storefronts, including custom themes, headless builds, product pages, cart flows, and conversion-focused improvements. The best next step is to share your store goals on the Contact page so we can recommend a scope.";
+    return "Yes. Novalix builds Shopify and e-commerce storefronts, including custom themes, headless builds, product pages, cart flows, and conversion-focused improvements. The best next step is to share your store goals on the Contact page so we can recommend a scope.";
   }
 
   if (latest.includes("time") || latest.includes("long") || latest.includes("timeline")) {
@@ -50,10 +50,10 @@ function fallbackAnswer(messages: Array<{ role: string; content: string }>) {
   }
 
   if (latest.includes("start") || latest.includes("contact") || latest.includes("project")) {
-    return "To start a project, use the Contact page and share what you want to build, your timeline, and any constraints. AYK Solutions replies within one business day with a practical next step.";
+    return "To start a project, use the Contact page and share what you want to build, your timeline, and any constraints. Novalix replies within one business day with a practical next step.";
   }
 
-  return "AYK Solutions builds custom websites, web applications, automation workflows, Shopify/e-commerce stores, WordPress sites, inventory systems, and custom software. Tell us what you need to build on the Contact page and we will help shape the right scope.";
+  return "Novalix builds custom websites, web applications, automation workflows, Shopify/e-commerce stores, WordPress sites, inventory systems, and custom software. Tell us what you need to build on the Contact page and we will help shape the right scope.";
 }
 
 export async function POST(request: Request) {

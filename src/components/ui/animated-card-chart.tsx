@@ -117,7 +117,7 @@ function WebsiteDevelopmentVisual({
           <span className="h-2 w-2 rounded-full bg-amber-500/80" />
           <span className="h-2 w-2 rounded-full bg-emerald-500/80" />
           <span className="ml-2 h-2.5 w-24 rounded-full bg-secondary/80 text-[8px] font-mono text-muted-foreground/70 flex items-center px-1.5 truncate">
-            https://ayksolutions.com
+            https://novalix.tech
           </span>
         </div>
 

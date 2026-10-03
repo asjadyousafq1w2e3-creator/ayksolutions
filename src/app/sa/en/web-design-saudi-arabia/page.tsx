@@ -4,13 +4,13 @@ import { ArrowRight, CheckCircle2, Globe, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://ayksolutions.com";
+const domain = "https://novalix.tech";
 const canonicalUrl = `${domain}/sa/en/web-design-saudi-arabia/`;
 
 export const metadata: Metadata = {
-  title: "Web Design Saudi Arabia for Growing Businesses | AYK Solutions",
+  title: "Web Design Saudi Arabia for Growing Businesses | Novalix",
   description:
-    "Launch a fast, modern and bilingual-ready business website in Saudi Arabia. AYK Solutions creates websites that build trust and generate customer enquiries.",
+    "Launch a fast, modern and bilingual-ready business website in Saudi Arabia. Novalix creates websites that build trust and generate customer enquiries.",
   alternates: {
     canonical: canonicalUrl,
     languages: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Web Design Saudi Arabia for Growing Businesses | AYK Solutions",
+    title: "Web Design Saudi Arabia for Growing Businesses | Novalix",
     description:
       "Fast, modern and bilingual-ready business websites for companies in Saudi Arabia.",
     url: canonicalUrl,
@@ -106,7 +106,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${canonicalUrl}#webpage`,
       url: canonicalUrl,
-      name: "Web Design Saudi Arabia for Growing Businesses | AYK Solutions",
+      name: "Web Design Saudi Arabia for Growing Businesses | Novalix",
       inLanguage: "en-SA",
       isPartOf: { "@id": `${domain}/#website` },
       breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
@@ -204,7 +204,7 @@ export default function WebDesignSaudiArabiaPage() {
                 Get Your Free Consultation <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/32466317714?text=Hi%20AYK%20Solutions%2C%20I%27d%20like%20to%20discuss%20a%20website%20project%20for%20my%20business%20in%20Saudi%20Arabia."
+                href="https://wa.me/32466317714?text=Hi%20Novalix%2C%20I%27d%20like%20to%20discuss%20a%20website%20project%20for%20my%20business%20in%20Saudi%20Arabia."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3 text-sm font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"

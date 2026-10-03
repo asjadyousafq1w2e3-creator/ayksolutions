@@ -4,13 +4,13 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://ayksolutions.com";
+const domain = "https://novalix.tech";
 const canonicalUrl = `${domain}/sa/ar/`;
 
 export const metadata: Metadata = {
-  title: "تصميم مواقع السعودية للشركات | AYK Solutions",
+  title: "تصميم مواقع السعودية للشركات | Novalix",
   description:
-    "تصميم مواقع إلكترونية احترافية للشركات في المملكة العربية السعودية. مواقع عربية وإنجليزية، تصميم متجاوب، تسليم سريع. ابدأ حضورك الرقمي مع AYK Solutions.",
+    "تصميم مواقع إلكترونية احترافية للشركات في المملكة العربية السعودية. مواقع عربية وإنجليزية، تصميم متجاوب، تسليم سريع. ابدأ حضورك الرقمي مع Novalix.",
   alternates: {
     canonical: canonicalUrl,
     languages: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "تصميم مواقع السعودية للشركات | AYK Solutions",
+    title: "تصميم مواقع السعودية للشركات | Novalix",
     description: "تصميم مواقع إلكترونية احترافية للشركات في المملكة العربية السعودية.",
     url: canonicalUrl,
     locale: "ar_SA",

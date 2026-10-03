@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!project) {
     return {
-      title: "Project Not Found | AYK Solutions",
+      title: "Project Not Found | Novalix",
     };
   }
 
   return {
-    title: `${project.title} | AYK Solutions Work`,
+    title: `${project.title} | Novalix Work`,
     description: project.shortDescription,
   };
 }
@@ -70,7 +70,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                   <span className="h-3 w-3 rounded-full bg-amber-500/80" />
                   <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
                   <span className="ml-3 hidden sm:inline-block rounded-md bg-background px-3 py-1 text-xs font-mono text-muted-foreground border border-border/60">
-                    {project.liveUrl || `https://ayksolutions.com/projects/${project.slug}`}
+                    {project.liveUrl || `https://novalix.tech/projects/${project.slug}`}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -119,7 +119,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               {project.filterCategories.map((c) => (
                 <span
                   key={c}
-                  className="rounded-full border border-border bg-white px-3 py-1 text-xs font-semibold text-foreground"
+                  className="rounded-full border border-border bg-white px-3 py-1 text-xs font-semibold text-foreground dark:bg-card"
                 >
                   {c}
                 </span>
@@ -211,17 +211,17 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         <Reveal>
           <Link
             href={`/projects/${nextProject.slug}`}
-            className="group metric-strip flex flex-col gap-6 rounded-[2rem] p-7 text-background shadow-card transition hover:shadow-glow md:flex-row md:items-center md:justify-between md:p-10"
+            className="group metric-strip flex flex-col gap-6 rounded-[2rem] p-7 text-white shadow-card transition hover:shadow-glow md:flex-row md:items-center md:justify-between md:p-10"
           >
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-background/78">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/78">
                 Next Featured Project
               </p>
               <h3 className="mt-2 max-w-3xl font-display text-2xl font-semibold md:text-3xl">
                 {nextProject.title} — {nextProject.category}
               </h3>
             </div>
-            <span className="inline-flex items-center gap-2 text-sm font-bold text-background transition group-hover:gap-3">
+            <span className="inline-flex items-center gap-2 text-sm font-bold text-white transition group-hover:gap-3">
               Explore next project <ArrowRight size={16} />
             </span>
           </Link>

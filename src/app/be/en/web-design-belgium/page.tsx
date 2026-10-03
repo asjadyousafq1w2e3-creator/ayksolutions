@@ -4,13 +4,13 @@ import { ArrowRight, CheckCircle2, MapPin, Phone, Sparkles, Star } from "lucide-
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://ayksolutions.com";
+const domain = "https://novalix.tech";
 const canonicalUrl = `${domain}/be/en/web-design-belgium/`;
 
 export const metadata: Metadata = {
-  title: "Web Design Belgium for Small Businesses | AYK Solutions",
+  title: "Web Design Belgium for Small Businesses | Novalix",
   description:
-    "Professional small-business websites in Belgium with mobile-first design, clear pricing and fast delivery. Build trust and launch your online presence with AYK Solutions.",
+    "Professional small-business websites in Belgium with mobile-first design, clear pricing and fast delivery. Build trust and launch your online presence with Novalix.",
   alternates: {
     canonical: canonicalUrl,
     languages: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Web Design Belgium for Small Businesses | AYK Solutions",
+    title: "Web Design Belgium for Small Businesses | Novalix",
     description:
       "Professional small-business websites in Belgium with mobile-first design, clear pricing and fast delivery.",
     url: canonicalUrl,
@@ -86,7 +86,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${canonicalUrl}#webpage`,
       url: canonicalUrl,
-      name: "Web Design Belgium for Small Businesses | AYK Solutions",
+      name: "Web Design Belgium for Small Businesses | Novalix",
       description:
         "Professional small-business websites in Belgium with mobile-first design, clear pricing and fast delivery.",
       inLanguage: "en-BE",
@@ -194,7 +194,7 @@ export default function WebDesignBelgiumPage() {
                 Get Your Free Consultation <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/32466317714?text=Hi%20AYK%20Solutions%2C%20I%27d%20like%20to%20discuss%20a%20project%20in%20Belgium."
+                href="https://wa.me/32466317714?text=Hi%20Novalix%2C%20I%27d%20like%20to%20discuss%20a%20project%20in%20Belgium."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3 text-sm font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"
@@ -273,9 +273,8 @@ export default function WebDesignBelgiumPage() {
                 We Turn Your Website Into a Business Asset
               </h3>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">
-                AYK Solutions creates websites that present your Belgian business professionally,
-                explain your services clearly and guide visitors toward enquiries, bookings and
-                purchases.
+                Novalix creates websites that present your Belgian business professionally, explain
+                your services clearly and guide visitors toward enquiries, bookings and purchases.
               </p>
               <Link
                 href="/contact?market=belgium"

@@ -4,13 +4,13 @@ import { ArrowRight, CheckCircle2, MapPin, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://ayksolutions.com";
+const domain = "https://novalix.tech";
 const canonicalUrl = `${domain}/be/fr/creation-site-web-belgique/`;
 
 export const metadata: Metadata = {
-  title: "Création Site Web Belgique pour Petites Entreprises | AYK Solutions",
+  title: "Création Site Web Belgique pour Petites Entreprises | Novalix",
   description:
-    "Création de sites web professionnels pour petites entreprises en Belgique. Design responsive, livraison rapide et tarifs transparents. Lancez votre présence en ligne avec AYK Solutions.",
+    "Création de sites web professionnels pour petites entreprises en Belgique. Design responsive, livraison rapide et tarifs transparents. Lancez votre présence en ligne avec Novalix.",
   alternates: {
     canonical: canonicalUrl,
     languages: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Création Site Web Belgique pour Petites Entreprises | AYK Solutions",
+    title: "Création Site Web Belgique pour Petites Entreprises | Novalix",
     description: "Création de sites web professionnels pour petites entreprises en Belgique.",
     url: canonicalUrl,
     locale: "fr_BE",
@@ -81,7 +81,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${canonicalUrl}#webpage`,
       url: canonicalUrl,
-      name: "Création Site Web Belgique pour Petites Entreprises | AYK Solutions",
+      name: "Création Site Web Belgique pour Petites Entreprises | Novalix",
       description:
         "Création de sites web professionnels pour petites entreprises en Belgique. Design responsive, livraison rapide et tarifs transparents.",
       inLanguage: "fr-BE",
@@ -184,7 +184,7 @@ export default function CreationSiteWebBelgiquePage() {
                 Obtenir une consultation gratuite <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/32466317714?text=Bonjour%20AYK%20Solutions%2C%20je%20souhaite%20discuter%20d%27un%20projet%20de%20site%20web%20en%20Belgique."
+                href="https://wa.me/32466317714?text=Bonjour%20Novalix%2C%20je%20souhaite%20discuter%20d%27un%20projet%20de%20site%20web%20en%20Belgique."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3 text-sm font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"

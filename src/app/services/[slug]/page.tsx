@@ -37,15 +37,15 @@ export async function generateMetadata({
   const service = services.find((s) => s.slug === slug);
   if (!service) {
     return {
-      title: "Service Not Found | AYK Solutions",
+      title: "Service Not Found | Novalix",
     };
   }
 
   return {
-    title: `${service.title} — Professional Engineering & Delivery | AYK Solutions`,
+    title: `${service.title} — Professional Engineering & Delivery | Novalix`,
     description: service.heroSubhead,
     openGraph: {
-      title: `${service.title} — AYK Solutions`,
+      title: `${service.title} — Novalix`,
       description: service.short,
     },
   };

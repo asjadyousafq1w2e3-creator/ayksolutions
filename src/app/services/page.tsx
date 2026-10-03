@@ -64,12 +64,10 @@ export default function ServicesPage() {
           <Reveal>
             <p className="section-kicker">Software services</p>
             <h1 className="mt-4 max-w-4xl text-3xl font-display font-semibold leading-tight md:text-5xl">
-              Design, engineering, and automation for businesses that need software to work.
+              POS, Inventory and Web Systems
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
-              AYK Solutions builds conversion-focused websites, SaaS products, e-commerce
-              storefronts, internal systems, and automation workflows with the discipline of a
-              product engineering team.
+              We build tools for sales, stock and online growth, tailored to your business.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
@@ -80,7 +78,7 @@ export default function ServicesPage() {
               </Link>
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 rounded-xl border border-foreground/15 bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-xl border border-foreground/15 bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:text-primary dark:bg-card"
               >
                 See results
               </Link>
@@ -160,7 +158,7 @@ export default function ServicesPage() {
               <Reveal key={p.step} delay={i * 0.06}>
                 <div className="technical-card h-full rounded-[1.35rem] p-5">
                   <div className="flex items-center justify-between gap-3">
-                    <div className="grid h-10 w-10 place-items-center rounded-xl bg-white text-primary shadow-soft">
+                    <div className="grid h-10 w-10 place-items-center rounded-xl bg-white text-primary shadow-soft dark:bg-secondary">
                       <p.icon size={18} />
                     </div>
                     <span className="font-mono text-xs font-semibold text-[color:var(--accent-technical)]">
@@ -178,16 +176,16 @@ export default function ServicesPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <Reveal>
-          <div className="metric-strip overflow-hidden rounded-[2rem] p-7 text-background shadow-card md:p-10">
+          <div className="metric-strip overflow-hidden rounded-[2rem] p-7 text-white shadow-card md:p-10">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-background/78">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/78">
                   Start with clarity
                 </p>
                 <h2 className="mt-3 max-w-2xl text-2xl font-display font-semibold md:text-4xl">
                   Bring us the problem. We will help shape the right software path.
                 </h2>
-                <p className="mt-3 max-w-xl text-sm leading-7 text-background/82">
+                <p className="mt-3 max-w-xl text-sm leading-7 text-white/82">
                   You will leave the first call with a sharper scope, a realistic timeline, and a
                   recommendation on what to build first.
                 </p>

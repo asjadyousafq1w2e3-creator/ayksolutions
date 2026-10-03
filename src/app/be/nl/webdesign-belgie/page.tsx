@@ -4,13 +4,13 @@ import { ArrowRight, CheckCircle2, MapPin, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://ayksolutions.com";
+const domain = "https://novalix.tech";
 const canonicalUrl = `${domain}/be/nl/webdesign-belgie/`;
 
 export const metadata: Metadata = {
-  title: "Webdesign België voor Kleine Bedrijven | AYK Solutions",
+  title: "Webdesign België voor Kleine Bedrijven | Novalix",
   description:
-    "Professioneel webdesign voor kleine bedrijven in België. Mobiel-first design, transparante prijzen en snelle oplevering. Start uw online aanwezigheid met AYK Solutions.",
+    "Professioneel webdesign voor kleine bedrijven in België. Mobiel-first design, transparante prijzen en snelle oplevering. Start uw online aanwezigheid met Novalix.",
   alternates: {
     canonical: canonicalUrl,
     languages: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Webdesign België voor Kleine Bedrijven | AYK Solutions",
+    title: "Webdesign België voor Kleine Bedrijven | Novalix",
     description:
       "Professioneel webdesign voor kleine bedrijven in België. Mobiel-first design, transparante prijzen en snelle oplevering.",
     url: canonicalUrl,
@@ -82,7 +82,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${canonicalUrl}#webpage`,
       url: canonicalUrl,
-      name: "Webdesign België voor Kleine Bedrijven | AYK Solutions",
+      name: "Webdesign België voor Kleine Bedrijven | Novalix",
       inLanguage: "nl-BE",
       isPartOf: { "@id": `${domain}/#website` },
     },
@@ -176,7 +176,7 @@ export default function WebdesignBelgiePage() {
                 Gratis consult aanvragen <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/32466317714?text=Hallo%20AYK%20Solutions%2C%20ik%20wil%20graag%20een%20website%20laten%20maken%20voor%20mijn%20bedrijf%20in%20Belgi%C3%AB."
+                href="https://wa.me/32466317714?text=Hallo%20Novalix%2C%20ik%20wil%20graag%20een%20website%20laten%20maken%20voor%20mijn%20bedrijf%20in%20Belgi%C3%AB."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3 text-sm font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"

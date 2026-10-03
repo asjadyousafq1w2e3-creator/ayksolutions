@@ -12,7 +12,7 @@ export default function NotFound() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
           The link may have moved, or the address may be mistyped. You can return home or continue
-          exploring AYK Solutions from the main pages.
+          exploring Novalix from the main pages.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
@@ -24,9 +24,9 @@ export default function NotFound() {
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-xl border border-foreground/15 bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:text-primary"
+            className="inline-flex items-center gap-2 rounded-xl border border-foreground/15 bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:text-primary dark:bg-card"
           >
-            Contact AYK <ArrowRight size={16} />
+            Contact Novalix <ArrowRight size={16} />
           </Link>
         </div>
       </div>

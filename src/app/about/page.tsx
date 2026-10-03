@@ -13,16 +13,14 @@ import {
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "About AYK Solutions — International Web Design Partner",
-  description:
-    "AYK Solutions is a web design and development partner helping small businesses in Belgium, Saudi Arabia, Europe and Australia build a professional online presence.",
+  title: "About Novalix",
+  description: "Novalix builds POS systems, cloud inventory and custom web systems.",
   alternates: {
-    canonical: "https://ayksolutions.com/about/",
+    canonical: "https://novalix.tech/about/",
   },
   openGraph: {
-    title: "About AYK Solutions — International Web Design Partner",
-    description:
-      "Helping small businesses in Belgium, Saudi Arabia, Europe and Australia build a professional online presence.",
+    title: "About Novalix",
+    description: "Practical POS, inventory and web systems for growing businesses.",
   },
 };
 
@@ -63,15 +61,12 @@ export default function AboutPage() {
         <div className="absolute inset-0 brand-grid animate-grid-drift opacity-45 [mask-image:linear-gradient(180deg,black,transparent_82%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 pt-24 pb-14 md:pt-28 md:pb-20 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)] lg:items-center">
           <Reveal>
-            <p className="section-kicker">About AYK Solutions</p>
+            <p className="section-kicker">About Novalix</p>
             <h1 className="mt-4 max-w-4xl text-3xl font-display font-semibold leading-tight md:text-5xl">
-              Your International Web Design Partner for Small Business Growth
+              Practical Software for Growing Businesses
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
-              AYK Solutions helps small businesses in Belgium, Saudi Arabia, Europe and Australia
-              build professional websites and digital systems that earn customer trust, explain
-              services clearly and generate more enquiries. We focus on clear communication, honest
-              scope and reliable delivery.
+              We build POS systems, cloud inventory and websites that make daily work simpler.
             </p>
             <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-medium text-muted-foreground shadow-soft">
               <Globe size={12} className="text-primary" aria-hidden="true" />
@@ -82,21 +77,21 @@ export default function AboutPage() {
           <Reveal delay={0.12}>
             <div className="professional-card overflow-hidden rounded-[1.75rem] p-6">
               <div className="flex items-center gap-4">
-                <div className="relative grid h-16 w-16 place-items-center overflow-hidden rounded-3xl bg-white shadow-soft">
+                <div className="relative grid h-16 w-16 place-items-center rounded-3xl border border-border bg-card shadow-soft dark:border-white/10 dark:bg-white/5">
                   <span className="absolute inset-0 logo-sheen" />
                   <Image
-                    src="/ayk/logo.png"
+                    src="/transparent-logo.png"
                     alt=""
-                    width={58}
-                    height={58}
-                    className="relative h-14 w-14 object-contain"
+                    width={112}
+                    height={102}
+                    className="relative h-auto w-14 object-contain"
                   />
                 </div>
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                     Studio profile
                   </p>
-                  <h2 className="mt-1 text-xl font-display font-semibold">AYK Solutions</h2>
+                  <h2 className="mt-1 text-xl font-display font-semibold">Novalix</h2>
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -190,16 +185,16 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <Reveal>
-          <div className="metric-strip overflow-hidden rounded-[2rem] p-7 text-background shadow-card md:p-10">
+          <div className="metric-strip overflow-hidden rounded-[2rem] p-7 text-white shadow-card md:p-10">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-background/78">
-                  Work with AYK Solutions
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/78">
+                  Work with Novalix
                 </p>
                 <h2 className="mt-3 max-w-2xl text-2xl font-display font-semibold md:text-4xl">
                   Build a website that helps your business look professional and win more customers.
                 </h2>
-                <p className="mt-3 text-sm text-background/70 max-w-xl">
+                <p className="mt-3 text-sm text-white/70 max-w-xl">
                   We serve small businesses in Belgium, Saudi Arabia, Europe and Australia. All
                   collaboration happens remotely — clear, fast and focused on your goals.
                 </p>

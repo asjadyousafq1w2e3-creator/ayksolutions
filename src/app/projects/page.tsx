@@ -37,19 +37,13 @@ export default function ProjectsPage() {
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-primary">
               <Sparkles size={12} />
-              SELECTED CLIENT WORK
+              SELECTED WORK
             </div>
             <h1 className="mt-4 max-w-4xl font-display text-3xl font-semibold leading-tight text-foreground md:text-5xl">
-              Digital Experiences Built for Real Businesses
+              Projects Built for Real Businesses
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
-              Explore websites, ecommerce platforms, AI-powered products and business systems
-              created to solve practical challenges and support measurable business goals.
-            </p>
-            <p className="mt-3 text-xs font-semibold text-primary">
-              From Saudi business services and industrial companies to ecommerce brands and SaaS
-              products, every project is shaped around the client’s audience, operations and growth
-              objectives.
+              Explore Dine3D and the websites and systems we have built.
             </p>
           </Reveal>
 

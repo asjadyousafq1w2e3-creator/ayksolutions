@@ -4,11 +4,11 @@ import { ArrowRight, CheckCircle2, Globe, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://ayksolutions.com";
+const domain = "https://novalix.tech";
 const canonicalUrl = `${domain}/au/en/small-business-web-design/`;
 
 export const metadata: Metadata = {
-  title: "Small Business Web Design Australia | AYK Solutions",
+  title: "Small Business Web Design Australia | Novalix",
   description:
     "Mobile-first websites for Australian small businesses, consultants and service providers. Clear scope, fast delivery and ongoing website support. Serving Australian businesses remotely.",
   alternates: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Small Business Web Design Australia | AYK Solutions",
+    title: "Small Business Web Design Australia | Novalix",
     description:
       "Mobile-first websites for Australian small businesses, consultants and service providers.",
     url: canonicalUrl,
@@ -98,7 +98,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${canonicalUrl}#webpage`,
       url: canonicalUrl,
-      name: "Small Business Web Design Australia | AYK Solutions",
+      name: "Small Business Web Design Australia | Novalix",
       inLanguage: "en-AU",
       isPartOf: { "@id": `${domain}/#website` },
       breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
@@ -190,7 +190,7 @@ export default function AustraliaWebDesignPage() {
                 Get Your Free Consultation <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/32466317714?text=Hi%20AYK%20Solutions%2C%20I%27d%20like%20to%20discuss%20a%20website%20for%20my%20Australian%20business."
+                href="https://wa.me/32466317714?text=Hi%20Novalix%2C%20I%27d%20like%20to%20discuss%20a%20website%20for%20my%20Australian%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3 text-sm font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"

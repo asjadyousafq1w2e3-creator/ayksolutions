@@ -31,7 +31,6 @@ import {
   siWordpress,
   type SimpleIcon,
 } from "simple-icons";
-import heroResponsiveDevices from "@/assets/hero-responsive-devices.png";
 import { Reveal } from "@/components/Reveal";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { PricingTeaser } from "@/components/sections/PricingTeaser";
@@ -68,56 +67,38 @@ const trustPills = [
 ];
 
 const websiteProblems = [
-  "The website looks outdated and untrustworthy",
-  "Difficult to use on mobile devices",
-  "Services are not explained clearly",
-  "Visitors cannot find contact information",
-  "Pages load slowly and visitors leave",
-  "No clear call to action on any page",
-  "The business does not appear credible online",
-  "Traffic exists but enquiries are low",
-  "Competitors look more professional online",
-  "The website is not properly indexed by search engines",
-];
-
-const solutionFeatures = [
-  "Modern responsive design",
-  "Clear service presentation",
-  "Mobile-first user experience",
-  "Enquiry and booking forms",
-  "WhatsApp and email integration",
-  "Search-friendly site structure",
-  "Analytics setup",
-  "Performance optimisation",
-  "Security best practices",
-  "Post-launch support",
+  "Outdated customer experience",
+  "Slow or difficult on mobile",
+  "Disconnected business tools",
+  "Stock and sales are hard to track",
+  "Too few enquiries or orders",
 ];
 
 const launchProcess = [
   {
     num: "01",
     title: "Discovery and content",
-    body: "We clarify your goals, audience, services and content before any design begins.",
+    body: "We define your goals and scope.",
   },
   {
     num: "02",
     title: "Structure and design",
-    body: "Page layouts, mobile-first design and visual identity reviewed and approved by you.",
+    body: "You review the structure and design.",
   },
   {
     num: "03",
     title: "Development",
-    body: "Production-quality build on proven technology — fast, secure and maintainable.",
+    body: "We build your system.",
   },
   {
     num: "04",
     title: "Review and refinement",
-    body: "You review the live preview. Feedback is incorporated before launch.",
+    body: "We refine it with your feedback.",
   },
   {
     num: "05",
     title: "Testing and launch",
-    body: "Cross-device testing, SEO checks, performance review and go-live.",
+    body: "We test and launch.",
   },
 ];
 
@@ -165,13 +146,14 @@ export default function Home() {
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 bg-gradient-hero" />
-          <div className="absolute inset-0 opacity-[0.08] mix-blend-multiply">
+          <div className="absolute inset-0 opacity-[0.6] mix-blend-multiply dark:opacity-[0.25] dark:mix-blend-screen">
             <Image
-              src="/footer-bg-image.png"
+              src="/footer.png"
               alt=""
               fill
+              unoptimized
               sizes="100vw"
-              className="block h-full w-full object-cover object-center"
+              className="block h-full w-full object-cover object-center dark:invert dark:hue-rotate-180"
             />
           </div>
           <div className="absolute inset-0 brand-grid animate-grid-drift opacity-100 [mask-image:radial-gradient(ellipse_at_top,black_50%,transparent_80%)]" />
@@ -189,7 +171,7 @@ export default function Home() {
                 transition={{ duration: 0.45 }}
                 className="section-kicker"
               >
-                AYK Solutions
+                Novalix
               </motion.p>
 
               <motion.h1
@@ -199,8 +181,8 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="mt-4 max-w-4xl font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl"
               >
-                Your Business Deserves a Website That{" "}
-                <span className="gradient-text">Builds Trust and Wins Customers</span>
+                POS, Cloud Inventory and{" "}
+                <span className="gradient-text">Web Systems That Work</span>
               </motion.h1>
 
               <motion.p
@@ -209,8 +191,8 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.22 }}
                 className="mt-4 max-w-xl text-sm leading-6 text-muted-foreground md:text-base"
               >
-                We design fast, professional and conversion-focused websites that build trust,
-                explain your services clearly and generate qualified enquiries.
+                Novalix builds practical software for growing businesses. Explore Dine3D, our
+                restaurant platform.
               </motion.p>
 
               {/* CTAs */}
@@ -225,7 +207,7 @@ export default function Home() {
                   id="hero-cta-primary"
                   className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition hover:bg-[#b80309]"
                 >
-                  Get Your Free Website Consultation
+                  Discuss Your Project
                   <ArrowRight
                     size={16}
                     className="transition-transform group-hover:translate-x-0.5"
@@ -256,17 +238,6 @@ export default function Home() {
                   </div>
                 ))}
               </motion.div>
-
-              {/* 7-day disclaimer */}
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.7, delay: 0.55 }}
-                className="mt-3 text-[10px] text-muted-foreground/70 leading-5 max-w-sm"
-              >
-                Seven-day delivery applies to eligible standard business websites after content,
-                scope and required assets have been approved.
-              </motion.p>
             </motion.div>
 
             {/* Visual column */}
@@ -274,13 +245,13 @@ export default function Home() {
               <Reveal delay={0.25}>
                 <aside
                   data-cursor="focus"
-                  aria-label="Responsive website preview on laptop and mobile"
-                  className="relative overflow-hidden rounded-[2rem] border border-foreground/10 bg-foreground p-4 text-background shadow-card sm:p-5"
+                  aria-label="Novalix illustration"
+                  className="relative overflow-hidden rounded-[2rem] border border-foreground/10 bg-foreground p-4 text-background shadow-card dark:border-white/10 dark:bg-[#10141c] dark:text-white sm:p-5"
                 >
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(205,4,11,0.18),transparent_30%),linear-gradient(180deg,#161616_0%,#0f0f10_100%)]" />
                   <div className="relative">
                     <div className="flex justify-end">
-                      <span className="rounded-full border border-white/15 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-background/65">
+                      <span className="rounded-full border border-white/15 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-background/65 dark:text-white/65">
                         Live preview
                       </span>
                     </div>
@@ -302,15 +273,18 @@ export default function Home() {
                                 Responsive design preview
                               </span>
                             </div>
-                            <div className="rounded-full bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground shadow-soft">
+                            <div className="rounded-full bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground shadow-soft dark:bg-secondary">
                               Mobile-first
                             </div>
                           </div>
-                          <div className="overflow-hidden rounded-[1.35rem] border border-black/8 bg-white">
+                          <div className="overflow-hidden rounded-[1.35rem] border border-black/8 bg-white dark:border-white/10 dark:bg-[#090b10]">
                             <Image
-                              src={heroResponsiveDevices}
-                              alt="Laptop and mobile phone showing a responsive small business website designed by AYK Solutions."
-                              className="block w-full object-cover"
+                              src="/footer.png"
+                              alt="Novalix web development illustration with a computer and city skyline."
+                              width={1716}
+                              height={916}
+                              unoptimized
+                              className="block w-full object-cover dark:invert dark:hue-rotate-180"
                               priority
                               sizes="(max-width: 768px) 100vw, 45vw"
                             />
@@ -329,7 +303,7 @@ export default function Home() {
       {/* ── TECH MARQUEE ───────────────────────────────────────────────────── */}
       <section className="border-b border-border bg-gradient-soft" aria-label="Technologies we use">
         <Reveal>
-          <div className="overflow-hidden border-y border-border/80 bg-white/45 py-5 [mask-image:linear-gradient(90deg,transparent,black_8%,black_92%,transparent)]">
+          <div className="overflow-hidden border-y border-border/80 bg-white/45 py-5 dark:bg-card/60 [mask-image:linear-gradient(90deg,transparent,black_8%,black_92%,transparent)]">
             <div className="flex w-max animate-marquee-reverse items-center gap-2 pr-2 hover:[animation-play-state:paused]">
               {marqueeTechLogos.map((tech, index) => (
                 <div
@@ -365,12 +339,10 @@ export default function Home() {
                 id="problem-heading"
                 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl text-foreground"
               >
-                Your Website Should Generate Opportunities—not Send Customers Away
+                Make Everyday Work Simpler
               </h2>
               <p className="mt-4 text-base leading-7 text-muted-foreground">
-                An outdated, slow or confusing website can weaken trust before a customer ever
-                contacts you. We improve the design, messaging, mobile experience and conversion
-                journey so visitors can understand your business and take action confidently.
+                Clear websites and connected systems help your team serve customers faster.
               </p>
             </div>
           </Reveal>
@@ -394,12 +366,11 @@ export default function Home() {
           <Reveal delay={0.2}>
             <div className="mt-12 rounded-[1.75rem] border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-8 text-center md:p-10">
               <h3 className="font-display text-2xl font-semibold text-foreground md:text-3xl">
-                We Turn Your Website Into a Business Asset
+                Software Built Around Your Business
               </h3>
               <p className="mt-4 mx-auto max-w-2xl text-sm leading-7 text-muted-foreground">
-                AYK Solutions creates websites that present your business professionally, explain
-                your value clearly and guide visitors toward enquiries, bookings, calls or
-                purchases.
+                From restaurant POS to inventory and websites, we build tools people can use every
+                day.
               </p>
               <Link
                 href="/contact"
@@ -429,11 +400,10 @@ export default function Home() {
                 id="services-heading"
                 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl text-foreground"
               >
-                Everything Your Business Needs to Look Professional Online
+                POS, Inventory and Web Systems
               </h2>
               <p className="mt-4 text-base leading-7 text-muted-foreground">
-                From conversion-focused small-business websites to custom web applications,
-                e-commerce stores and business automation — delivered with clarity and speed.
+                Practical software and websites, built for your workflows.
               </p>
             </div>
           </Reveal>
@@ -461,7 +431,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHY TRUST AYK ──────────────────────────────────────────────────── */}
+      {/* ── WHY TRUST NOVALIX ──────────────────────────────────────────────── */}
       <WhyChooseUs />
 
       {/* ── SEVEN-DAY LAUNCH PROCESS ───────────────────────────────────────── */}
@@ -481,11 +451,10 @@ export default function Home() {
                 id="process-heading"
                 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl text-foreground"
               >
-                From Idea to Online in as Little as Seven Days
+                From Idea to Launch
               </h2>
               <p className="mt-4 text-base leading-7 text-muted-foreground">
-                Our streamlined process helps eligible small businesses launch quickly without
-                sacrificing clarity, mobile usability or professional presentation.
+                A clear process from first brief to launch.
               </p>
             </div>
           </Reveal>
@@ -564,11 +533,10 @@ export default function Home() {
               id="final-cta-heading"
               className="font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl text-foreground"
             >
-              Your Next Customer May Already Be Searching for You
+              Let’s Build What Your Business Needs
             </h2>
             <p className="mt-5 text-base leading-7 text-muted-foreground max-w-2xl mx-auto">
-              Make sure they discover a business that looks professional, trustworthy and ready to
-              help. Tell us about your project and receive a clear website recommendation.
+              Tell us what you need, and we’ll help define the next step.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
@@ -576,14 +544,14 @@ export default function Home() {
                 id="final-cta-button"
                 className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground shadow-soft transition hover:bg-[#b80309]"
               >
-                Start Your Website Project
+                Start Your Project
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-0.5"
                 />
               </Link>
               <a
-                href="https://wa.me/32466317714?text=Hi%20AYK%20Solutions%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                href="https://wa.me/32466317714?text=Hi%20Novalix%2C%20I%27d%20like%20to%20discuss%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3.5 text-sm font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"
@@ -594,9 +562,6 @@ export default function Home() {
                 WhatsApp Us
               </a>
             </div>
-            <p className="mt-4 text-xs text-muted-foreground">
-              Build trust online before your customer contacts you.
-            </p>
           </Reveal>
         </div>
       </section>
@@ -624,7 +589,7 @@ function FeaturedProjectsSection({ studies }: { studies: CaseStudy[] }) {
                 id="projects-heading"
                 className="mt-3 font-display text-2xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl"
               >
-                Real Websites Built for Real Businesses
+                Selected Work, Including Dine3D
               </h2>
             </div>
             <Link

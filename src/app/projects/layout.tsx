@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Development, Ecommerce, AI and SaaS Projects | Our Work",
-  description:
-    "Explore our web development portfolio featuring ecommerce stores, AI interview platforms, automotive marketplaces and multi-tenant restaurant SaaS products.",
+  title: "Projects and Dine3D | Novalix",
+  description: "Explore Novalix projects, including Dine3D restaurant POS, ordering and inventory.",
 };
 
 export default function ProjectsLayout({ children }: { children: React.ReactNode }) {

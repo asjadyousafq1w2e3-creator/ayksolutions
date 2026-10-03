@@ -3,11 +3,10 @@ import Link from "next/link";
 import { businessIdentity } from "@/data/businessIdentity";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | AYK Solutions",
-  description:
-    "Cookie policy for AYK Solutions website — what cookies we use and how to manage them.",
+  title: "Cookie Policy | Novalix",
+  description: "Cookie policy for Novalix website — what cookies we use and how to manage them.",
   robots: { index: true, follow: false },
-  alternates: { canonical: "https://ayksolutions.com/cookies/" },
+  alternates: { canonical: "https://novalix.tech/cookies/" },
 };
 
 const lastUpdated = "July 2026";

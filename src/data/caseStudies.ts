@@ -1,3 +1,4 @@
+import dineCurrent from "@/assets/case-studies/dine3d-current.png";
 import tamkeenImg from "@/assets/case-studies/Screenshot 2026-07-22 at 11.57.37 PM.png";
 import kitchubImg from "@/assets/case-studies/Screenshot 2026-07-22 at 11.57.52 PM.png";
 import ebnalarabImg from "@/assets/case-studies/ebnalarab.com.png";
@@ -5,12 +6,6 @@ import sirhaImg from "@/assets/case-studies/sirhadecor.com.png";
 import portacabinsImg from "@/assets/case-studies/portacabins.png";
 import royalImg from "@/assets/case-studies/royalessence.png";
 import sparekartImg from "@/assets/case-studies/sparekart.png";
-import dine1 from "@/assets/case-studies/dine3d1.png";
-import dine2 from "@/assets/case-studies/dine3d2.png";
-import dine3 from "@/assets/case-studies/dine3d3.png";
-import dine4 from "@/assets/case-studies/dine3d4.png";
-import dine5 from "@/assets/case-studies/dine3d5.png";
-import dine6 from "@/assets/case-studies/dine3d6.png";
 import civicImg from "@/assets/case-studies/civic-portal-ai.jpg";
 
 export interface Project {
@@ -45,6 +40,39 @@ export interface Project {
 export type CaseStudy = Project;
 
 export const projectsData: Project[] = [
+  {
+    slug: "dine3d",
+    title: "Dine3D",
+    category: "Restaurant POS and operating system",
+    filterCategories: ["SaaS Products", "Web Platforms"],
+    shortDescription:
+      "Our restaurant platform connects POS, kitchen screens, QR ordering, 3D menus, inventory and analytics.",
+    longDescription:
+      "Dine3D is Novalix's restaurant operating system. Teams take dine-in, takeaway and delivery orders through one POS, send tickets to kitchen displays, manage menus and tables, and track stock and sales. Guests can order through a QR menu and explore dishes in 3D. The till continues taking orders during an internet outage and syncs when the connection returns.",
+    challenge:
+      "Restaurant teams often switch between separate tools for orders, the kitchen, guest menus and stock.",
+    approach:
+      "We brought the main restaurant workflows into one connected platform with an offline-capable POS.",
+    whatWeDelivered:
+      "A restaurant operating system for ordering, kitchen displays, QR menus, 3D dish previews, inventory and reporting.",
+    valueStatement: "Restaurant teams can manage service and see their numbers from one workspace.",
+    thumbnail: dineCurrent.src,
+    coverGradient: "from-zinc-900 via-[#18181b] to-zinc-950",
+    features: [
+      "POS for dine-in, takeaway and delivery",
+      "Offline ordering with sync when reconnected",
+      "Kitchen display screens",
+      "QR ordering and interactive 3D menus",
+      "Recipe-linked inventory tracking",
+      "Sales and food cost reporting",
+      "Multi-branch workspaces",
+    ],
+    tags: ["Restaurant POS", "Kitchen Display", "Cloud Inventory", "QR Ordering"],
+    liveUrl: "https://dine3d.app",
+    status: "Live",
+    altText: "Dine3D restaurant POS and operating system",
+    featured: true,
+  },
   {
     slug: "tamkeen-zone",
     title: "Tamkeen Zone",
@@ -288,50 +316,6 @@ export const projectsData: Project[] = [
     liveUrl: "https://portacabins.online/",
     status: "Live",
     altText: "Porta Cabins Online Saudi modular building platform",
-    featured: true,
-  },
-  {
-    slug: "res3d-saas",
-    title: "Res3D Restaurant SaaS",
-    category: "Multi-Tenant SaaS / Restaurant Technology",
-    filterCategories: ["SaaS Products", "Web Platforms"],
-    shortDescription:
-      "A multi-tenant restaurant SaaS platform combining interactive 3D menus, digital ordering and restaurant inventory management within one centralized system.",
-    longDescription:
-      "Res3D is a restaurant technology platform designed to modernize menu discovery, customer ordering and restaurant operations. Customers can explore food items through interactive 3D menu experiences before placing an order. Restaurant teams can manage menu items, orders, stock and operational information through dedicated dashboards. The system follows a multi-tenant SaaS model, allowing multiple restaurants to operate from the same platform while maintaining separate restaurant data, users, menus, orders and inventory.",
-    challenge:
-      "Traditional online menus lack engagement, and managing multi-location food ordering alongside inventory often requires separate disjointed software tools.",
-    approach:
-      "We engineered a multi-tenant web application featuring WebGL 3D menu previews, instant QR ordering, and real-time stock reduction workflows.",
-    whatWeDelivered:
-      "A complete SaaS ecosystem with multi-restaurant onboarding, role-based dashboards, and interactive 3D menu visualization.",
-    valueStatement:
-      "Empowers restaurant brands to increase average order values through immersive 3D presentation while synchronizing inventory across digital channels.",
-    thumbnail: dine1.src,
-    gallery: [dine1.src, dine2.src, dine3.src, dine4.src, dine5.src, dine6.src],
-    coverGradient: "from-zinc-900 via-[#18181b] to-zinc-950",
-    features: [
-      "Multi-tenant restaurant onboarding",
-      "Individual restaurant workspaces",
-      "Interactive 3D food-menu presentation",
-      "QR-based digital menu access",
-      "Customer ordering workflow",
-      "Order-status management",
-      "Menu and category management",
-      "Inventory and stock management",
-      "Restaurant administration dashboard",
-      "Role-based access control",
-    ],
-    tags: [
-      "Multi-Tenant SaaS",
-      "3D Menu",
-      "Restaurant Management",
-      "Inventory System",
-      "Food Ordering",
-    ],
-    liveUrl: null,
-    status: "SaaS Product",
-    altText: "Res3D multi-tenant 3D restaurant ordering and inventory platform",
     featured: true,
   },
   {
