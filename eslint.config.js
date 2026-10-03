@@ -7,6 +7,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   { ignores: ["dist", ".output", ".vinxi", ".next", "next-env.d.ts"] },
+  { plugins: { "@next/next": nextPlugin } },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
@@ -28,9 +29,6 @@ export default tseslint.config(
       "src/integrations/**/*.{ts,tsx}",
       "src/lib/**/*.{ts,tsx}",
     ],
-    plugins: {
-      "@next/next": nextPlugin,
-    },
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs["core-web-vitals"].rules,

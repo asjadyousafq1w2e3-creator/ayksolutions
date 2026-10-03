@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  outputFileTracingRoot: process.cwd(),
   images: {
     remotePatterns: [
       {
@@ -16,9 +17,7 @@ const nextConfig = {
     tsconfigPath: "./tsconfig.json",
   },
   async redirects() {
-    return [
-      { source: "/projects/res3d-saas", destination: "/projects/dine3d", permanent: true },
-    ];
+    return [{ source: "/projects/res3d-saas", destination: "/projects/dine3d", permanent: true }];
   },
 };
 

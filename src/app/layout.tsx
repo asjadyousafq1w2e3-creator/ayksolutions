@@ -119,8 +119,8 @@ function StructuredData() {
     logo: {
       "@type": "ImageObject",
       url: `${domain}/transparent-logo.png`,
-      width: 524,
-      height: 476,
+      width: 551,
+      height: 453,
     },
     description:
       "Novalix builds POS systems, cloud inventory and custom web systems, including Dine3D for restaurants.",
