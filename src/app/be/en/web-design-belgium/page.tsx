@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, MapPin, Phone, Sparkles, Star } from "lucide-
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://novalix.tech";
+const domain = "https://www.novalix.tech";
 const canonicalUrl = `${domain}/be/en/web-design-belgium/`;
 
 export const metadata: Metadata = {
@@ -17,11 +17,10 @@ export const metadata: Metadata = {
       "en-BE": canonicalUrl,
       "fr-BE": `${domain}/be/fr/creation-site-web-belgique/`,
       "nl-BE": `${domain}/be/nl/webdesign-belgie/`,
-      en: `${domain}/`,
-      "x-default": `${domain}/`,
     },
   },
   openGraph: {
+    images: ["/opengraph-image"],
     title: "Web Design Belgium for Small Businesses | Novalix",
     description:
       "Professional small-business websites in Belgium with mobile-first design, clear pricing and fast delivery.",
@@ -98,7 +97,7 @@ const jsonLd = {
       "@id": `${canonicalUrl}#breadcrumb`,
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: domain },
-        { "@type": "ListItem", position: 2, name: "Belgium", item: `${domain}/be/` },
+        { "@type": "ListItem", position: 2, name: "Belgium" },
         { "@type": "ListItem", position: 3, name: "Web Design Belgium", item: canonicalUrl },
       ],
     },

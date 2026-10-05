@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Globe, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://novalix.tech";
+const domain = "https://www.novalix.tech";
 const canonicalUrl = `${domain}/au/en/small-business-web-design/`;
 
 export const metadata: Metadata = {
@@ -13,13 +13,9 @@ export const metadata: Metadata = {
     "Mobile-first websites for Australian small businesses, consultants and service providers. Clear scope, fast delivery and ongoing website support. Serving Australian businesses remotely.",
   alternates: {
     canonical: canonicalUrl,
-    languages: {
-      "en-AU": canonicalUrl,
-      en: `${domain}/`,
-      "x-default": `${domain}/`,
-    },
   },
   openGraph: {
+    images: ["/opengraph-image"],
     title: "Small Business Web Design Australia | Novalix",
     description:
       "Mobile-first websites for Australian small businesses, consultants and service providers.",
@@ -108,7 +104,7 @@ const jsonLd = {
       "@id": `${canonicalUrl}#breadcrumb`,
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: domain },
-        { "@type": "ListItem", position: 2, name: "Australia", item: `${domain}/au/` },
+        { "@type": "ListItem", position: 2, name: "Australia" },
         { "@type": "ListItem", position: 3, name: "Small Business Web Design", item: canonicalUrl },
       ],
     },

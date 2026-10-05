@@ -1,9 +1,8 @@
 User-agent: *
 Allow: /
 
-# Disallow dev/internal paths
+# Private API endpoints are not indexable pages.
 Disallow: /api/
-Disallow: /_next/
 
 # Sitemap
-Sitemap: https://novalix.tech/sitemap.xml
+Sitemap: https://www.novalix.tech/sitemap.xml

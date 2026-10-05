@@ -7,13 +7,16 @@ export const metadata: Metadata = {
   title: "Web Design Insights for Small Businesses | Novalix",
   description:
     "Practical guides on website design, SEO, ecommerce and online presence for small businesses in Belgium, Saudi Arabia, Europe and Australia.",
+  robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://novalix.tech/insights/",
+    canonical: "https://www.novalix.tech/insights/",
   },
   openGraph: {
+    images: ["/opengraph-image"],
     title: "Web Design Insights for Small Businesses | Novalix",
     description:
       "Practical guides on website design, SEO and online presence for small businesses.",
+    url: "https://www.novalix.tech/insights/",
   },
 };
 

@@ -19,38 +19,13 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const domain = "https://novalix.tech";
+const domain = "https://www.novalix.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(domain),
-  title: {
-    default: "POS Systems, Cloud Inventory & Web Systems | Novalix",
-    template: "%s | Novalix",
-  },
+  title: "POS Systems, Cloud Inventory & Web Systems | Novalix",
   description:
     "Novalix builds POS systems, cloud inventory and custom web systems. Explore Dine3D, our restaurant platform.",
-  keywords: [
-    "Novalix",
-    "POS systems",
-    "restaurant POS",
-    "cloud inventory systems",
-    "web systems",
-    "Dine3D",
-    "web design Belgium",
-    "website development Belgium",
-    "small business website Belgium",
-    "web design Brussels",
-    "professional website Belgium",
-    "web design Saudi Arabia",
-    "website development Saudi Arabia",
-    "small business web design Australia",
-    "ecommerce development Belgium",
-    "Shopify developer Belgium",
-    "WordPress website Belgium",
-    "website redesign",
-    "conversion-focused website",
-    "mobile-first web design",
-  ],
   authors: [{ name: "Novalix", url: domain }],
   creator: "Novalix",
   publisher: "Novalix",
@@ -65,20 +40,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: domain,
-    languages: {
-      en: `${domain}/`,
-      "en-BE": `${domain}/be/en/web-design-belgium/`,
-      "fr-BE": `${domain}/be/fr/creation-site-web-belgique/`,
-      "nl-BE": `${domain}/be/nl/webdesign-belgie/`,
-      "en-SA": `${domain}/sa/en/web-design-saudi-arabia/`,
-      "ar-SA": `${domain}/sa/ar/`,
-      "en-AU": `${domain}/au/en/small-business-web-design/`,
-      "x-default": `${domain}/`,
-    },
-  },
   openGraph: {
+    images: ["/opengraph-image"],
     title: "POS Systems, Cloud Inventory & Web Systems | Novalix",
     description:
       "POS systems, cloud inventory and custom web systems from Novalix. Meet Dine3D for restaurants.",
@@ -89,8 +52,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "POS Systems, Cloud Inventory & Web Systems | Novalix",
-    description: "POS systems, cloud inventory and web systems. Explore Dine3D.",
   },
   icons: {
     icon: [
@@ -101,10 +62,6 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/site.webmanifest",
-  verification: {
-    // google: "YOUR_GSC_VERIFICATION_CODE",  // Add when GSC is configured
-    // other: { "msvalidate.01": "YOUR_BING_CODE" },
-  },
 };
 
 /** JSON-LD structured data — Organization + WebSite */
@@ -114,7 +71,6 @@ function StructuredData() {
     "@type": "Organization",
     "@id": `${domain}/#organization`,
     name: businessIdentity.name,
-    legalName: businessIdentity.legalName,
     url: domain,
     logo: {
       "@type": "ImageObject",
@@ -145,9 +101,6 @@ function StructuredData() {
       { "@type": "Country", name: "Netherlands" },
       { "@type": "Country", name: "France" },
     ],
-    sameAs: [
-      // Add confirmed social profile URLs here when available
-    ],
   };
 
   const website = {
@@ -158,14 +111,6 @@ function StructuredData() {
     name: "Novalix",
     description: "POS systems, cloud inventory and custom web systems for growing businesses.",
     publisher: { "@id": `${domain}/#organization` },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${domain}/?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (

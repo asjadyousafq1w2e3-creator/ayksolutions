@@ -5,8 +5,8 @@ import { businessIdentity } from "@/data/businessIdentity";
 export const metadata: Metadata = {
   title: "Cookie Policy | Novalix",
   description: "Cookie policy for Novalix website — what cookies we use and how to manage them.",
-  robots: { index: true, follow: false },
-  alternates: { canonical: "https://novalix.tech/cookies/" },
+  robots: { index: false, follow: true },
+  alternates: { canonical: "https://www.novalix.tech/cookies/" },
 };
 
 const lastUpdated = "July 2026";

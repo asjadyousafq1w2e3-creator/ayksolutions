@@ -5,8 +5,8 @@ import { businessIdentity } from "@/data/businessIdentity";
 export const metadata: Metadata = {
   title: "Terms and Conditions | Novalix",
   description: "Terms and conditions governing the use of the Novalix website and services.",
-  robots: { index: true, follow: false },
-  alternates: { canonical: "https://novalix.tech/terms/" },
+  robots: { index: false, follow: true },
+  alternates: { canonical: "https://www.novalix.tech/terms/" },
 };
 
 const lastUpdated = "July 2026";

@@ -1,0 +1,34 @@
+# Novalix: site summary
+
+Canonical website: https://www.novalix.tech/
+
+Novalix designs and develops websites, web applications, ecommerce stores, custom business software, and inventory systems. Its restaurant platform Dine3D combines point of sale, kitchen displays, QR ordering, menus, inventory, and reporting. The website includes service descriptions, selected project pages, regional web-design pages, pricing information, and a contact form.
+
+## Services
+
+- Custom websites: https://www.novalix.tech/services/custom-websites/
+- Web applications: https://www.novalix.tech/services/web-apps/
+- WordPress websites: https://www.novalix.tech/services/wordpress/
+- Shopify and ecommerce: https://www.novalix.tech/services/shopify-ecommerce/
+- Custom software: https://www.novalix.tech/services/custom-software/
+- Inventory management: https://www.novalix.tech/services/inventory/
+
+Check the service pages for the current scope and wording. Project cost and schedule depend on the agreed scope. See https://www.novalix.tech/pricing/ for published estimates and https://www.novalix.tech/contact/ to request a proposal.
+
+## Work and markets
+
+Selected work: https://www.novalix.tech/projects/
+
+Dine3D case study: https://www.novalix.tech/projects/dine3d/
+
+Belgium web design is described in English, French, and Dutch at https://www.novalix.tech/be/en/web-design-belgium/, https://www.novalix.tech/be/fr/creation-site-web-belgique/, and https://www.novalix.tech/be/nl/webdesign-belgie/.
+
+Saudi Arabia web design: https://www.novalix.tech/sa/en/web-design-saudi-arabia/
+
+Australia small business web design: https://www.novalix.tech/au/en/small-business-web-design/
+
+Novalix describes its work with clients in these markets as remote collaboration. The Belgium address is presented as a business contact; the site does not claim a walk-in office in every service area.
+
+## Source of truth
+
+Use the linked website pages as the source for services, case studies, prices, and contact details. Do not invent customer results, certifications, guarantees, office locations, or launch dates. For all crawlable indexable pages, see https://www.novalix.tech/sitemap.xml.

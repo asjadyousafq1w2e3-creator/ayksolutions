@@ -24,6 +24,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${project.title} | Novalix Work`,
     description: project.shortDescription,
+    alternates: { canonical: `https://www.novalix.tech/projects/${slug}/` },
+    openGraph: {
+      images: ["/opengraph-image"],
+      title: `${project.title} | Novalix Work`,
+      description: project.shortDescription,
+      url: `https://www.novalix.tech/projects/${slug}/`,
+    },
   };
 }
 
@@ -37,9 +44,41 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   const idx = projectsData.findIndex((p) => p.slug === project.slug);
   const nextProject = projectsData[(idx + 1) % projectsData.length];
+  const canonicalUrl = `https://www.novalix.tech/projects/${slug}/`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": `${canonicalUrl}#case-study`,
+        name: project.title,
+        description: project.shortDescription,
+        url: canonicalUrl,
+        author: { "@id": "https://www.novalix.tech/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.novalix.tech/" },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Projects",
+            item: "https://www.novalix.tech/projects/",
+          },
+          { "@type": "ListItem", position: 3, name: project.title, item: canonicalUrl },
+        ],
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* HERO BANNER */}
       <section className="professional-shell">
         <div className="absolute inset-0 brand-grid animate-grid-drift opacity-45 [mask-image:linear-gradient(180deg,black,transparent_82%)]" />
@@ -70,7 +109,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                   <span className="h-3 w-3 rounded-full bg-amber-500/80" />
                   <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
                   <span className="ml-3 hidden sm:inline-block rounded-md bg-background px-3 py-1 text-xs font-mono text-muted-foreground border border-border/60">
-                    {project.liveUrl || `https://novalix.tech/projects/${project.slug}`}
+                    {project.liveUrl || `https://www.novalix.tech/projects/${project.slug}`}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">

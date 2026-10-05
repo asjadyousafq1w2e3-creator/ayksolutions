@@ -1,56 +1,26 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 import { projectsData } from "@/data/caseStudies";
 
-const domain = "https://novalix.tech";
+const domain = "https://www.novalix.tech";
+const entry = (path: string): MetadataRoute.Sitemap[number] => ({ url: `${domain}${path}` });
 
-function url(
-  path: string,
-  priority: number,
-  changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] = "monthly",
-) {
-  return {
-    url: `${domain}${path}`,
-    lastModified: new Date(),
-    changeFrequency,
-    priority,
-  };
-}
+const belgiumLanguages = {
+  "en-BE": `${domain}/be/en/web-design-belgium/`,
+  "fr-BE": `${domain}/be/fr/creation-site-web-belgique/`,
+  "nl-BE": `${domain}/be/nl/webdesign-belgie/`,
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const servicePages = services.map((s) => url(`/services/${s.slug}/`, 0.8));
-
-  const projectPages = projectsData.map((p) => url(`/projects/${p.slug}/`, 0.7));
-
   return [
-    // ── Global core pages ─────────────────────────────────────────────────────
-    url("/", 1.0, "weekly"),
-    url("/services/", 0.9, "weekly"),
-    url("/projects/", 0.9, "monthly"),
-    url("/about/", 0.8, "monthly"),
-    url("/contact/", 0.9, "monthly"),
-    url("/pricing/", 0.85, "monthly"),
-    url("/insights/", 0.8, "weekly"),
-
-    // ── Belgium (highest priority market) ────────────────────────────────────
-    url("/be/en/web-design-belgium/", 0.95, "monthly"),
-    url("/be/fr/creation-site-web-belgique/", 0.95, "monthly"),
-    url("/be/nl/webdesign-belgie/", 0.95, "monthly"),
-
-    // ── Saudi Arabia ─────────────────────────────────────────────────────────
-    url("/sa/en/web-design-saudi-arabia/", 0.9, "monthly"),
-    url("/sa/ar/", 0.9, "monthly"),
-
-    // ── Australia ────────────────────────────────────────────────────────────
-    url("/au/en/small-business-web-design/", 0.85, "monthly"),
-
-    // ── Legal ─────────────────────────────────────────────────────────────────
-    url("/privacy/", 0.3, "yearly"),
-    url("/cookies/", 0.3, "yearly"),
-    url("/terms/", 0.3, "yearly"),
-
-    // ── Dynamic pages ────────────────────────────────────────────────────────
-    ...servicePages,
-    ...projectPages,
+    ...["/", "/services/", "/projects/", "/about/", "/contact/", "/pricing/"].map(entry),
+    ...Object.values(belgiumLanguages).map((url) => ({
+      url,
+      alternates: { languages: belgiumLanguages },
+    })),
+    entry("/sa/en/web-design-saudi-arabia/"),
+    entry("/au/en/small-business-web-design/"),
+    ...services.map((service) => entry(`/services/${service.slug}/`)),
+    ...projectsData.map((project) => entry(`/projects/${project.slug}/`)),
   ];
 }

@@ -6,7 +6,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist", ".output", ".vinxi", ".next", "next-env.d.ts"] },
+  { ignores: ["dist", ".output", ".vinxi", ".next", "next-env.d.ts", "src/shaders/**"] },
   { plugins: { "@next/next": nextPlugin } },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],

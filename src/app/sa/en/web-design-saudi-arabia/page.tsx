@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Globe, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://novalix.tech";
+const domain = "https://www.novalix.tech";
 const canonicalUrl = `${domain}/sa/en/web-design-saudi-arabia/`;
 
 export const metadata: Metadata = {
@@ -13,14 +13,9 @@ export const metadata: Metadata = {
     "Launch a fast, modern and bilingual-ready business website in Saudi Arabia. Novalix creates websites that build trust and generate customer enquiries.",
   alternates: {
     canonical: canonicalUrl,
-    languages: {
-      "en-SA": canonicalUrl,
-      "ar-SA": `${domain}/sa/ar/`,
-      en: `${domain}/`,
-      "x-default": `${domain}/`,
-    },
   },
   openGraph: {
+    images: ["/opengraph-image"],
     title: "Web Design Saudi Arabia for Growing Businesses | Novalix",
     description:
       "Fast, modern and bilingual-ready business websites for companies in Saudi Arabia.",
@@ -116,7 +111,7 @@ const jsonLd = {
       "@id": `${canonicalUrl}#breadcrumb`,
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: domain },
-        { "@type": "ListItem", position: 2, name: "Saudi Arabia", item: `${domain}/sa/` },
+        { "@type": "ListItem", position: 2, name: "Saudi Arabia" },
         { "@type": "ListItem", position: 3, name: "Web Design Saudi Arabia", item: canonicalUrl },
       ],
     },

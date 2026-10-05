@@ -22,7 +22,7 @@ export const businessIdentity = {
   cityNl: "Brussel",
   country: "Belgium",
   countryCode: "BE",
-  website: "https://novalix.tech",
+  website: "https://www.novalix.tech",
   /** Label to use near the address — honest, no fake walk-in claims */
   addressLabel: "Belgium Business Contact",
 } as const;

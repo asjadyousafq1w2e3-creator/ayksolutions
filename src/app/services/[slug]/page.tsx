@@ -44,9 +44,12 @@ export async function generateMetadata({
   return {
     title: `${service.title} — Professional Engineering & Delivery | Novalix`,
     description: service.heroSubhead,
+    alternates: { canonical: `https://www.novalix.tech/services/${slug}/` },
     openGraph: {
+      images: ["/opengraph-image"],
       title: `${service.title} — Novalix`,
       description: service.short,
+      url: `https://www.novalix.tech/services/${slug}/`,
     },
   };
 }
@@ -60,9 +63,41 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   const Icon = service.icon;
   const relatedStudies = caseStudies.slice(0, 3);
+  const canonicalUrl = `https://www.novalix.tech/services/${slug}/`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${canonicalUrl}#service`,
+        name: service.title,
+        description: service.description,
+        url: canonicalUrl,
+        provider: { "@id": "https://www.novalix.tech/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.novalix.tech/" },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Services",
+            item: "https://www.novalix.tech/services/",
+          },
+          { "@type": "ListItem", position: 3, name: service.title, item: canonicalUrl },
+        ],
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* HERO SECTION */}
       <section className="professional-shell">
         <div className="absolute inset-0 brand-grid animate-grid-drift opacity-40 [mask-image:linear-gradient(180deg,black,transparent_85%)]" />

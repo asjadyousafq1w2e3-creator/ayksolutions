@@ -14,6 +14,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { services } from "@/data/services";
 import { AnimatedServiceCard } from "@/components/ui/animated-card-chart";
+import { PredictiveArcCanvas } from "@/shaders/predictive-arc/PredictiveArcCanvas";
 
 const process = [
   {
@@ -115,10 +116,20 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-14">
-        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+      <section className="relative isolate overflow-hidden py-12">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 opacity-20">
+          <PredictiveArcCanvas
+            variant="signal-particles"
+            mode="light"
+            speed={1.0}
+            hue={0}
+            saturation={1.0}
+            brightness={1.0}
+          />
+        </div>
+        <div className="relative mx-auto grid max-w-7xl gap-4 px-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
-            <Reveal key={s.slug} delay={(i % 3) * 0.06}>
+            <Reveal key={s.slug} delay={(i % 3) * 0.06} className="h-full">
               <AnimatedServiceCard
                 index={i}
                 slug={s.slug}

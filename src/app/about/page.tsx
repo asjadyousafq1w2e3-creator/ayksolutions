@@ -16,11 +16,13 @@ export const metadata: Metadata = {
   title: "About Novalix",
   description: "Novalix builds POS systems, cloud inventory and custom web systems.",
   alternates: {
-    canonical: "https://novalix.tech/about/",
+    canonical: "https://www.novalix.tech/about/",
   },
   openGraph: {
+    images: ["/opengraph-image"],
     title: "About Novalix",
     description: "Practical POS, inventory and web systems for growing businesses.",
+    url: "https://www.novalix.tech/about/",
   },
 };
 

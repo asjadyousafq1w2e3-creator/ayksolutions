@@ -1,0 +1,31 @@
+# Novalix
+
+> Novalix builds custom websites, web applications, business software, inventory systems, and Dine3D, a restaurant POS and operations platform. The website describes services, selected projects, pricing, and contact options.
+
+Novalix has a Belgium business contact and works with clients remotely. Use the linked pages for current details; do not infer prices, availability, or results from this summary.
+
+## Company and services
+
+- [Home](https://www.novalix.tech/): Overview of Novalix and Dine3D.
+- [Services](https://www.novalix.tech/services/): Websites, web apps, WordPress, Shopify, custom software, and inventory systems.
+- [Pricing](https://www.novalix.tech/pricing/): Published package and estimate information.
+- [About](https://www.novalix.tech/about/): Team approach and delivery standards.
+- [Contact](https://www.novalix.tech/contact/): Project enquiries and contact information.
+
+## Work
+
+- [Projects](https://www.novalix.tech/projects/): Selected projects and case studies.
+- [Dine3D](https://www.novalix.tech/projects/dine3d/): Restaurant POS, kitchen display, ordering, and inventory platform.
+
+## Regional pages
+
+- [Belgium, English](https://www.novalix.tech/be/en/web-design-belgium/): Web design for Belgian small businesses.
+- [Belgium, French](https://www.novalix.tech/be/fr/creation-site-web-belgique/): Création de sites web pour les petites entreprises en Belgique.
+- [Belgium, Dutch](https://www.novalix.tech/be/nl/webdesign-belgie/): Webdesign voor kleine bedrijven in België.
+- [Saudi Arabia, English](https://www.novalix.tech/sa/en/web-design-saudi-arabia/): Web design for Saudi businesses.
+- [Australia, English](https://www.novalix.tech/au/en/small-business-web-design/): Remote web design for Australian small businesses.
+
+## Optional
+
+- [Full site summary](https://www.novalix.tech/llms-full.txt): Longer, plain-text overview for assistants.
+- [XML sitemap](https://www.novalix.tech/sitemap.xml): Indexable site URLs.

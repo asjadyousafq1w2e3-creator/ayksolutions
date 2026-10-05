@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, MapPin, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { businessIdentity } from "@/data/businessIdentity";
 
-const domain = "https://novalix.tech";
+const domain = "https://www.novalix.tech";
 const canonicalUrl = `${domain}/be/fr/creation-site-web-belgique/`;
 
 export const metadata: Metadata = {
@@ -17,11 +17,10 @@ export const metadata: Metadata = {
       "fr-BE": canonicalUrl,
       "en-BE": `${domain}/be/en/web-design-belgium/`,
       "nl-BE": `${domain}/be/nl/webdesign-belgie/`,
-      en: `${domain}/`,
-      "x-default": `${domain}/`,
     },
   },
   openGraph: {
+    images: ["/opengraph-image"],
     title: "Création Site Web Belgique pour Petites Entreprises | Novalix",
     description: "Création de sites web professionnels pour petites entreprises en Belgique.",
     url: canonicalUrl,
@@ -91,7 +90,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: domain },
-        { "@type": "ListItem", position: 2, name: "Belgique", item: `${domain}/be/` },
+        { "@type": "ListItem", position: 2, name: "Belgique" },
         {
           "@type": "ListItem",
           position: 3,
@@ -113,7 +112,7 @@ const jsonLd = {
 
 export default function CreationSiteWebBelgiquePage() {
   return (
-    <>
+    <div lang="fr-BE">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -360,6 +359,6 @@ export default function CreationSiteWebBelgiquePage() {
           </Reveal>
         </div>
       </section>
-    </>
+    </div>
   );
 }

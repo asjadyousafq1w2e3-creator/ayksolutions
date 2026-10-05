@@ -117,7 +117,7 @@ function WebsiteDevelopmentVisual({
           <span className="h-2 w-2 rounded-full bg-amber-500/80" />
           <span className="h-2 w-2 rounded-full bg-emerald-500/80" />
           <span className="ml-2 h-2.5 w-24 rounded-full bg-secondary/80 text-[8px] font-mono text-muted-foreground/70 flex items-center px-1.5 truncate">
-            https://novalix.tech
+            https://www.novalix.tech
           </span>
         </div>
 
@@ -480,62 +480,46 @@ export function AnimatedServiceCard({
   title,
   short,
   bullets,
-  mainColor,
-  secondaryColor,
-  badge1,
-  badge2,
-  tooltipTitle,
-  tooltipSub,
   icon: Icon,
   slug,
   index,
 }: ServiceCardProps) {
   return (
-    <AnimatedCard>
-      <CardVisual>
-        <ServiceDomainVisual slug={slug} mainColor={mainColor} secondaryColor={secondaryColor} />
-        <div className="absolute bottom-3 right-3 z-[20] flex h-7 w-7 items-center justify-center rounded-lg border border-border/80 bg-background/90 text-xs font-mono font-bold text-foreground shadow-soft backdrop-blur-md">
+    <article className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-card sm:p-6">
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-primary/15 bg-primary/10 text-primary">
+          <Icon size={21} strokeWidth={1.8} aria-hidden="true" />
+        </div>
+        <span className="font-mono text-xs font-semibold tracking-wider text-muted-foreground/65">
           0{index + 1}
-        </div>
-      </CardVisual>
-      <CardBody>
-        <div>
-          <CardTitle>{title}</CardTitle>
-
-          <ul className="mt-4 space-y-2">
-            {bullets.map((b) => (
-              <li
-                key={b}
-                className="flex items-center gap-2 text-xs font-medium text-foreground/80"
-              >
-                <div className="flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Check size={10} className="stroke-[2.5]" />
-                </div>
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="pt-4 border-t border-border/60 flex items-center gap-2">
-          <Link
-            href={`/services/${slug}`}
-            className="group/link flex-1 inline-flex items-center justify-between rounded-xl border border-border bg-secondary/80 px-3.5 py-2.5 text-xs font-bold text-foreground transition-all duration-300 hover:border-primary/40 hover:bg-secondary hover:text-primary shadow-sm"
+        </span>
+      </div>
+      <h3 className="mt-4 font-display text-lg font-semibold leading-snug tracking-tight text-foreground sm:text-xl">
+        {title}
+      </h3>
+      <p className="mt-1.5 text-sm leading-5 text-muted-foreground">{short}</p>
+      <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1.5">
+        {bullets.map((bullet) => (
+          <li
+            key={bullet}
+            className="flex items-center gap-1.5 text-[11px] font-medium text-foreground/75"
           >
-            <span>Explore Service</span>
-            <ArrowRight
-              size={13}
-              className="transition-transform duration-300 group-hover/link:translate-x-1"
-            />
-          </Link>
-          <Link
-            href={`/contact?service=${encodeURIComponent(title)}`}
-            className="inline-flex items-center justify-center rounded-xl bg-primary px-3.5 py-2.5 text-xs font-bold text-primary-foreground transition-all duration-300 hover:bg-[#b8040b] shadow-sm"
-          >
-            Discuss
-          </Link>
-        </div>
-      </CardBody>
-    </AnimatedCard>
+            <Check size={12} className="shrink-0 text-primary" aria-hidden="true" />
+            {bullet}
+          </li>
+        ))}
+      </ul>
+      <Link
+        href={`/services/${slug}`}
+        className="mt-auto flex items-center justify-between gap-3 border-t border-border/70 pt-4 text-sm font-semibold text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+      >
+        Explore service
+        <ArrowRight
+          size={16}
+          className="transition-transform group-hover:translate-x-1"
+          aria-hidden="true"
+        />
+      </Link>
+    </article>
   );
 }

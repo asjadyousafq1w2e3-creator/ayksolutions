@@ -5,8 +5,8 @@ import { businessIdentity } from "@/data/businessIdentity";
 export const metadata: Metadata = {
   title: "Privacy Policy | Novalix",
   description: "Privacy policy for Novalix — how we collect, use and protect personal data.",
-  robots: { index: true, follow: false },
-  alternates: { canonical: "https://novalix.tech/privacy/" },
+  robots: { index: false, follow: true },
+  alternates: { canonical: "https://www.novalix.tech/privacy/" },
 };
 
 const lastUpdated = "July 2026";

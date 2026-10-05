@@ -346,9 +346,9 @@ export function PricingSection() {
               <Sparkles size={12} />
               SIMPLE & TRANSPARENT PRICING
             </div>
-            <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl text-foreground">
+            <h1 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl text-foreground">
               Choose the Right Plan for Your Business
-            </h2>
+            </h1>
             <p className="mt-4 text-base font-semibold text-foreground">
               Professional digital solutions at transparent, globally competitive prices.
             </p>
